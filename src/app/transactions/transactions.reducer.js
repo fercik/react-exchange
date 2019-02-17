@@ -5,8 +5,9 @@ export const transactionsReducer = (state = [], action) => {
         case ADD_TRANSACTION:
             return [
                 ...state,
-                ...action.data,
-            ];
+                action.data,
+            ]
+                .sort((a, b) => a.createdAt < b.createdAt ? 1 : -1);
         default:
             return state;
     }

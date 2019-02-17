@@ -5,24 +5,31 @@ export class TopUpComponent extends Component {
     
     state = {
         topUpAmount: 0,
-        fullWidth: true,
-        maxWidth: 'sm',
     };
     
     onChangeHandler = topUpAmount => event => {
-        console.log(topUpAmount, event);
         this.setState({ [topUpAmount]: event.target.value });
     };
     
+    onClickHandler = () => {
+        const { onConfirm } = this.props;
+        onConfirm(this.state.topUpAmount);
+        this.clearState();
+    };
+    
+    clearState = () => {
+        this.setState({ topUpAmount: 0 });
+    };
+    
     render() {
-        const { isDialogOpened, onBackdropClick, onConfirm, onCancel } = this.props;
+        const { isDialogOpened, onBackdropClick, onCancel } = this.props;
         
         return (
             <Dialog
                 open={isDialogOpened}
                 onBackdropClick={onBackdropClick}
-                fullWidth={this.state.fullWidth}
-                maxWidth={this.state.maxWidth}
+                fullWidth={true}
+                maxWidth='sm'
             >
                 <DialogTitle>Top up your pocket</DialogTitle>
                 <DialogContent>
@@ -39,7 +46,7 @@ export class TopUpComponent extends Component {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={onCancel}>Close</Button>
-                    <Button color="secondary" onClick={() => onConfirm(this.state.topUpAmount)}>Top Up</Button>
+                    <Button color="secondary" onClick={this.onClickHandler}>Top Up</Button>
                 </DialogActions>
             </Dialog>
         );

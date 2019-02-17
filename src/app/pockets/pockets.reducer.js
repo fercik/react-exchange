@@ -13,10 +13,13 @@ export const pocketsReducer = (state = {}, action) => {
                 .filter(pocket => pocket.id === action.data.id)
                 .map(pocket => ({ ...pocket, ...action.data }));
         case TOP_UP_POCKET:
-            return state
-                .items
-                .filter(pocket => pocket.id === action.pocketId)
-                .map(pocket => ({ ...pocket, balance: action.balance }));
+            return {
+                ...state,
+                items: state
+                    .items
+                    .filter(pocket => pocket.id === action.pocketId)
+                    .map(pocket => ({ ...pocket, balance: Number(pocket.balance) + Number(action.balance) }))
+            };
         default:
             return state;
     }

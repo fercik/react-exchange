@@ -19,22 +19,25 @@ const styles = () => ({
 class PocketItemComponent extends Component {
     
     state = {
-        isDialogOpened: false,
+        isTopUpDialogOpened: false,
     };
     
     openDialog = () => {
-        this.setState({ isDialogOpened: true });
+        this.setState({ isTopUpDialogOpened: true });
     };
     
     closeDialog = () => {
-        this.setState({ isDialogOpened: false });
+        this.setState({ isTopUpDialogOpened: false });
     };
     
     onBackdropClick = () => {
         this.closeDialog();
     };
     
-    onConfirm = (topUpAmount) => {
+    onTopUpConfirm = (topUpAmount) => {
+        const { pocket, topUpPocket, addTopUpTransaction } = this.props;
+        topUpPocket(pocket.id, topUpAmount);
+        addTopUpTransaction(pocket, topUpAmount);
         this.closeDialog();
     };
     
@@ -59,9 +62,9 @@ class PocketItemComponent extends Component {
                 </CardContent>
                 
                 <TopUpComponent
-                    isDialogOpened={this.state.isDialogOpened}
+                    isDialogOpened={this.state.isTopUpDialogOpened}
                     onBackdropClick={this.onBackdropClick}
-                    onConfirm={this.onConfirm}
+                    onConfirm={this.onTopUpConfirm}
                     onCancel={this.onCancel}
                 />
             </Card>

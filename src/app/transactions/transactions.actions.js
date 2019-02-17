@@ -5,6 +5,23 @@ export const addTransaction = data => ({
     data,
 });
 
+export const addTopUpTransaction = (pocket, amount) => ({
+    type: ADD_TRANSACTION,
+    data: {
+        symbol: pocket.symbol,
+        to: pocket.id,
+        createdAt: Date.now(),
+        baseValue: amount,
+        type: 'TOP_UP',
+    },
+});
+
+export const addExchangeTransaction = (fromPocket, toPocket, baseAmount, destinationAmount) => ({
+    type: ADD_TRANSACTION,
+    data: {
+    },
+});
+
 export const getTransactionsByPocketId = (transactions, pocketId) =>
     transactions.filter(
         transaction =>
