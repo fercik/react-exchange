@@ -30,14 +30,11 @@ class PocketItemComponent extends Component {
         this.setState({ isTopUpDialogOpened: false });
     };
     
-    onBackdropClick = () => {
-        this.closeDialog();
-    };
-    
-    onTopUpConfirm = (topUpAmount) => {
+    onTopUpConfirm = (topUpValue) => {
         const { pocket, topUpPocket, addTopUpTransaction } = this.props;
-        topUpPocket(pocket.id, topUpAmount);
-        addTopUpTransaction(pocket, topUpAmount);
+        
+        topUpPocket(pocket.id, topUpValue);
+        addTopUpTransaction(pocket, topUpValue);
         this.closeDialog();
     };
     
@@ -45,7 +42,7 @@ class PocketItemComponent extends Component {
         this.closeDialog();
     };
     
-    render() {
+    render = () => {
         const { pocket, classes } = this.props;
         
         return (
@@ -63,13 +60,12 @@ class PocketItemComponent extends Component {
                 
                 <TopUpComponent
                     isDialogOpened={this.state.isTopUpDialogOpened}
-                    onBackdropClick={this.onBackdropClick}
                     onConfirm={this.onTopUpConfirm}
                     onCancel={this.onCancel}
                 />
             </Card>
         );
-    }
+    };
 }
 
 export default withStyles(styles)(PocketItemComponent);

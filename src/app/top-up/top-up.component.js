@@ -1,54 +1,127 @@
 import React, { Component } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@material-ui/core';
+import {
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    FormControl,
+    FormHelperText,
+    TextField
+} from '@material-ui/core';
+
+const initialState = {
+    topUpValue: 100,
+    form: {
+        errors: {
+            minValue: false,
+            format: false,
+        },
+        isValid: true,
+    },
+};
 
 export class TopUpComponent extends Component {
     
-    state = {
-        topUpAmount: 0,
-    };
+    state = initialState;
     
-    onChangeHandler = topUpAmount => event => {
-        this.setState({ [topUpAmount]: event.target.value });
+    onChangeHandler = topUpValue => event => {
+        this.setState({ [topUpValue]: event.target.value });
     };
     
     onClickHandler = () => {
         const { onConfirm } = this.props;
-        onConfirm(this.state.topUpAmount);
+        onConfirm(this.state.topUpValue);
+        this.clearState();
+    };
+    
+    onCancelHandler = () => {
+        const { onCancel } = this.props;
+        onCancel();
         this.clearState();
     };
     
     clearState = () => {
-        this.setState({ topUpAmount: 0 });
+        this.setState(initialState);
     };
     
-    render() {
-        const { isDialogOpened, onBackdropClick, onCancel } = this.props;
+    setMinValueError = (hasError) => {
+        this.setState({
+            form: {
+                errors: {
+                    minValue: hasError,
+                },
+                isValid: !hasError,
+            },
+        });
+    };
+    
+    setFormatError = (isWrongFormat) => {
+        this.setState({
+            form: {
+                errors: {
+                    format: isWrongFormat,
+                },
+                isValid: !isWrongFormat,
+            },
+        });
+    };
+    
+    clearErrors = () => {
+        this.setFormatError(false);
+        this.setMinValueError(false);
+    };
+    
+    validateInput = () => {
+        const val = parseFloat(this.state.topUpValue).toFixed(2);
+        
+        if (!val) {
+            return this.setFormatError(true);
+        }
+        
+        if (val <= 0) {
+            return this.setMinValueError(true);
+        }
+        
+        this.setState({ topUpValue: val });
+        return this.clearErrors();
+    };
+    
+    render = () => {
+        const { isDialogOpened } = this.props;
         
         return (
             <Dialog
                 open={isDialogOpened}
-                onBackdropClick={onBackdropClick}
                 fullWidth={true}
                 maxWidth='sm'
             >
                 <DialogTitle>Top up your pocket</DialogTitle>
                 <DialogContent>
                     <form noValidate autoComplete="off">
-                        <TextField
-                            id="top-up-amount"
-                            label="Top Up amount"
-                            value={this.state.topUpAmount}
-                            onChange={this.onChangeHandler('topUpAmount')}
-                            type="number"
-                            fullWidth
-                        />
+                        <FormControl required fullWidth>
+                            <TextField
+                                id="top-up-value"
+                                label="Top Up value"
+                                value={this.state.topUpValue}
+                                onChange={this.onChangeHandler('topUpValue')}
+                                onBlur={this.validateInput}
+                                type="number"
+                                fullWidth
+                            />
+                            {this.state.form.errors.minValue && <FormHelperText error>Value must be greater than 0</FormHelperText>}
+                        </FormControl>
                     </form>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={onCancel}>Close</Button>
-                    <Button color="secondary" onClick={this.onClickHandler}>Top Up</Button>
+                    <Button onClick={this.onCancelHandler}>Close</Button>
+                    <Button
+                        color="secondary"
+                        onClick={this.onClickHandler}
+                        disabled={!this.state.form.isValid}
+                    >Top Up</Button>
                 </DialogActions>
             </Dialog>
         );
-    }
+    };
 }

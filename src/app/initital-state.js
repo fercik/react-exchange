@@ -25,29 +25,5 @@ export const initialState = {
             },
         ],
     },
-    transactions: [
-        {
-            symbol: '$',
-            to: 'usd',
-            baseValue: 50,
-            createdAt: 1550254609335,
-            type: 'TOP_UP'
-        },
-        {
-            symbol: '$',
-            to: 'usd',
-            baseValue: 150,
-            createdAt: 1550254609335,
-            type: 'TOP_UP'
-        },
-        {
-            symbol: '£',
-            from: 'gbp',
-            to: 'eur',
-            baseValue: 50,
-            destinationValue: 57.03,
-            createdAt: 1550254609337,
-            type: 'EXCHANGE'
-        }
-    ]
+    transactions: []
 };

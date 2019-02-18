@@ -1,24 +1,25 @@
 export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 
-export const addTransaction = data => ({
-    type: ADD_TRANSACTION,
-    data,
-});
-
-export const addTopUpTransaction = (pocket, amount) => ({
+export const addTopUpTransaction = (pocket, baseValue) => ({
     type: ADD_TRANSACTION,
     data: {
         symbol: pocket.symbol,
         to: pocket.id,
         createdAt: Date.now(),
-        baseValue: amount,
+        baseValue,
         type: 'TOP_UP',
     },
 });
 
-export const addExchangeTransaction = (fromPocket, toPocket, baseAmount, destinationAmount) => ({
+export const addExchangeTransaction = (fromPocket, toPocket, baseValue, destinationValue) => ({
     type: ADD_TRANSACTION,
     data: {
+        from: fromPocket.id,
+        to: toPocket.id,
+        baseValue,
+        destinationValue,
+        createdAt: Date.now(),
+        type: 'EXCHANGE',
     },
 });
 
