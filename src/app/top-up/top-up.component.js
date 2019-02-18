@@ -98,20 +98,17 @@ export class TopUpComponent extends Component {
             >
                 <DialogTitle>Top up your pocket</DialogTitle>
                 <DialogContent>
-                    <form noValidate autoComplete="off">
-                        <FormControl required fullWidth>
-                            <TextField
-                                id="top-up-value"
-                                label="Top Up value"
-                                value={this.state.topUpValue}
-                                onChange={this.onChangeHandler('topUpValue')}
-                                onBlur={this.validateInput}
-                                type="number"
-                                fullWidth
-                            />
-                            {this.state.form.errors.minValue && <FormHelperText error>Value must be greater than 0</FormHelperText>}
-                        </FormControl>
-                    </form>
+                    <TextField
+                        id="top-up-value"
+                        label="Top Up value"
+                        value={this.state.topUpValue}
+                        onChange={this.onChangeHandler('topUpValue')}
+                        onBlur={this.validateInput}
+                        type="number"
+                        fullWidth
+                    />
+                    {this.state.form.errors.minValue &&
+                    <FormHelperText error>Value must be greater than 0</FormHelperText>}
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={this.onCancelHandler}>Close</Button>
