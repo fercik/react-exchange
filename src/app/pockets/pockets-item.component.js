@@ -6,7 +6,7 @@ import { TopUpComponent } from '../top-up/top-up.component';
 
 const styles = () => ({
     card: {
-        margin: '0 16px',
+        marginTop: '16px',
     },
     header: {
         backgroundColor: '#1E88E5',

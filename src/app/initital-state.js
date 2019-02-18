@@ -1,6 +1,5 @@
 export const initialState = {
     pockets: {
-        visibleItem: 0,
         items: [
             {
                 id: 'gbp',
