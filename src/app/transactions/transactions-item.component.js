@@ -1,5 +1,6 @@
 import React from 'react';
-import { ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { AttachMoney, SwapHoriz } from '@material-ui/icons';
 
 const showTransactionValue = (transaction, pocketId) => {
     if (transaction.from === pocketId) {
@@ -12,7 +13,9 @@ const showTransactionValue = (transaction, pocketId) => {
 };
 
 export const TransactionsItem = ({ transaction, pocketId }) => (
-    <ListItem>
+    <ListItem divider>
+        {transaction.type === 'TOP_UP' && <ListItemIcon><AttachMoney/></ListItemIcon>}
+        {transaction.type === 'EXCHANGE' && <ListItemIcon><SwapHoriz/></ListItemIcon>}
         <ListItemText primary={showTransactionValue(transaction, pocketId)} secondary={transaction.type}/>
     </ListItem>
 );
