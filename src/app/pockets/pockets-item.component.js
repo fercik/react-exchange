@@ -22,11 +22,11 @@ class PocketItemComponent extends Component {
         isTopUpDialogOpened: false,
     };
     
-    openDialog = () => {
+    openTopUpDialog = () => {
         this.setState({ isTopUpDialogOpened: true });
     };
     
-    closeDialog = () => {
+    closeTopUpDialog = () => {
         this.setState({ isTopUpDialogOpened: false });
     };
     
@@ -35,15 +35,15 @@ class PocketItemComponent extends Component {
         
         topUpPocket(pocket.id, topUpValue);
         addTopUpTransaction(pocket, topUpValue);
-        this.closeDialog();
+        this.closeTopUpDialog();
     };
     
-    onCancel = () => {
-        this.closeDialog();
+    onTopUpCancel = () => {
+        this.closeTopUpDialog();
     };
     
     render = () => {
-        const { pocket, classes } = this.props;
+        const { pocket, classes, openExchangeDialog } = this.props;
         
         return (
             <Card className={classes.card}>
@@ -51,8 +51,10 @@ class PocketItemComponent extends Component {
                     <Typography variant="h3" className={classes.header}>{pocket.symbol} {pocket.balance}</Typography>
                 </div>
                 <CardActions>
-                    <Button color="inherit" onClick={this.openDialog}>Top Up</Button>
-                    <Button color="inherit">Exchange</Button>
+                    <Button color="inherit" onClick={this.openTopUpDialog}>Top Up</Button>
+                    <Button color="inherit" onClick={() => {
+                        openExchangeDialog();
+                    }}>Exchange</Button>
                 </CardActions>
                 <CardContent>
                     <TransactionsContainer pocketId={pocket.id}/>
@@ -61,7 +63,7 @@ class PocketItemComponent extends Component {
                 <TopUpComponent
                     isDialogOpened={this.state.isTopUpDialogOpened}
                     onConfirm={this.onTopUpConfirm}
-                    onCancel={this.onCancel}
+                    onCancel={this.onTopUpCancel}
                 />
             </Card>
         );

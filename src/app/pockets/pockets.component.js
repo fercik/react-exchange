@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs } from '@material-ui/core';
 
 import PocketItemComponent from './pockets-item.component';
+import { addExchangeTransaction } from '../transactions/transactions.actions';
 
 export class PocketsComponent extends Component {
     
@@ -14,7 +15,7 @@ export class PocketsComponent extends Component {
     };
     
     render = () => {
-        const { pockets, topUpPocket, addTopUpTransaction } = this.props;
+        const { pockets, topUpPocket, addTopUpTransaction, openExchangeDialog } = this.props;
         
         return (
             <div>
@@ -28,6 +29,8 @@ export class PocketsComponent extends Component {
                     pocket={pockets[this.state.currentTab]}
                     topUpPocket={topUpPocket}
                     addTopUpTransaction={addTopUpTransaction}
+                    addExchangeTransaction={addExchangeTransaction}
+                    openExchangeDialog={openExchangeDialog}
                 />
             </div>
         );

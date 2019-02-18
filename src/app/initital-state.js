@@ -24,5 +24,8 @@ export const initialState = {
             },
         ],
     },
-    transactions: []
+    transactions: [],
+    exchange: {
+        isDialogVisible: false,
+    }
 };
