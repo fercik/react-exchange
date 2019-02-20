@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 import { PocketsComponent } from './pockets.component';
-import { addTopUpTransaction } from '../transactions/transactions.actions';
-import { topUpPocket } from './pockets.actions';
+import { addTransaction } from '../transactions/transactions.actions';
 import { openExchangeDialog } from '../exchange/exchange.actions';
+import { updatePocket } from './pockets.actions';
 
 const mapStateToProps = state => ({
     pockets: state.pockets.items,
@@ -11,8 +11,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    topUpPocket: (pocketId, balance) => dispatch(topUpPocket(pocketId, balance)),
-    addTopUpTransaction: (pocket, amount) => dispatch(addTopUpTransaction(pocket, amount)),
+    addTransaction: (pocket, value, type) => dispatch(addTransaction(pocket, value, type)),
+    updatePocket: (pocketId, data) => dispatch(updatePocket(pocketId, data)),
     openExchangeDialog: () => dispatch(openExchangeDialog()),
 });
 

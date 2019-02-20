@@ -11,7 +11,7 @@ const styles = () => ({
     header: {
         backgroundColor: '#1E88E5',
         color: '#ffffff',
-        padding: '32px',
+        padding: '64px',
         textAlign: 'center',
     }
 });
@@ -31,10 +31,15 @@ class PocketItemComponent extends Component {
     };
     
     onTopUpConfirm = (topUpValue) => {
-        const { pocket, topUpPocket, addTopUpTransaction } = this.props;
+        const { pocket, addTransaction, updatePocket } = this.props;
         
-        topUpPocket(pocket.id, topUpValue);
-        addTopUpTransaction(pocket, topUpValue);
+        addTransaction(pocket, topUpValue, 'TOP_UP');
+        updatePocket(
+            pocket.id,
+            {
+                balance: parseFloat(pocket.balance) + parseFloat(topUpValue),
+            }
+        );
         this.closeTopUpDialog();
     };
     

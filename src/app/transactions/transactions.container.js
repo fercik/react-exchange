@@ -4,7 +4,7 @@ import { TransactionsComponent } from './transactions.component';
 import { getTransactionsByPocketId } from './transactions.actions';
 
 const mapStateToProps = state => ({
-    transactions: pocketId => getTransactionsByPocketId(state.transactions, pocketId),
+    transactionsList: pocketId => getTransactionsByPocketId(state.transactions, pocketId),
 });
 
 export const TransactionsContainer = connect(
