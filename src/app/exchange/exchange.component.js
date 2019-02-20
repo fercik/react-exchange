@@ -5,6 +5,7 @@ import {
     MenuItem, Select
 } from '@material-ui/core';
 import { SwapHoriz } from '@material-ui/icons';
+import axios from 'axios';
 
 import './exchange.component.css';
 
@@ -44,7 +45,7 @@ export class ExchangeComponent extends Component {
         updatePocket(
             this.state.toPocket.id,
             {
-                balance: Number(this.state.fromPocket.balance) + Number(this.getDestinationValue())
+                balance: Number(this.state.toPocket.balance) + Number(this.getDestinationValue())
             }
         );
         
@@ -86,8 +87,11 @@ export class ExchangeComponent extends Component {
     };
     
     getCurrentExchangeRate = () => {
-        const rate = (Math.random() * (5 - 3 + 1)).toFixed(2) + 3;
-        this.setState({ exchangeRate: rate });
+        axios
+            .get(`https://api.exchangeratesapi.io/latest?base=${this.state.fromPocket.id.toUpperCase()}`)
+            .then((result) => {
+                this.setState({ exchangeRate: result.data.rates[this.state.toPocket.id.toUpperCase()] });
+            });
     };
     
     setCounter = () => {
@@ -184,7 +188,12 @@ export class ExchangeComponent extends Component {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={this.onCancelHandler}>Close</Button>
-                    <Button color='secondary' onClick={this.onClickHandler}>Exchange</Button>
+                    <Button
+                        color='secondary'
+                        onClick={this.onClickHandler}
+                    >
+                        Exchange
+                    </Button>
                 </DialogActions>
             </Dialog>
         );
