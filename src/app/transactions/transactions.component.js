@@ -2,14 +2,15 @@ import React from 'react';
 import { List, Typography } from '@material-ui/core';
 
 import './transactions.component.css';
-import { TransactionsItem } from './transactions-item.component';
+import { TransactionsItem } from './item/transactions-item.component';
 
 export const TransactionsComponent = ({ pocketId, transactionsList }) => (
     <div className="transactions">
         <Typography variant="h6">Transactions</Typography>
         {transactionsList(pocketId).length === 0 &&
-            <div>There are not transactions for current pocket</div>
+            <div className="empty">There are no transactions for current pocket</div>
         }
+        
         {transactionsList(pocketId).length > 0 &&
             <List>
                 {

@@ -4,10 +4,11 @@ import {
     DialogTitle, FormControl, Input, InputLabel,
     MenuItem, Select
 } from '@material-ui/core';
-import { SwapHoriz } from '@material-ui/icons';
 import axios from 'axios';
 
 import './exchange.component.css';
+import { ResultComponent } from './result/result.component';
+import { CounterComponent } from './counter/counter.component';
 
 const initialState = {
     fromPocket: null,
@@ -176,15 +177,14 @@ export class ExchangeComponent extends Component {
                         </FormControl>
                     </div>
                     
-                    <div className="result">
-                        {this.state.baseValue} {this.state.fromPocket.label}
-                        <SwapHoriz className="result__icon"/>
-                        {this.getDestinationValue()} {this.state.toPocket.label}
-                    </div>
+                    <ResultComponent
+                        baseValue={this.state.baseValue}
+                        destinationValue={this.getDestinationValue()}
+                        fromLabel={this.state.fromPocket.label}
+                        toLabel={this.state.toPocket.label}
+                    />
                     
-                    <div>
-                        Exchange rate will change in {this.displayCounter()} seconds
-                    </div>
+                    <CounterComponent currentTime={this.displayCounter()}/>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={this.onCancelHandler}>Close</Button>

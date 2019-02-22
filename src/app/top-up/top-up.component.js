@@ -108,6 +108,9 @@ export class TopUpComponent extends Component {
                     />
                     {this.state.form.errors.minValue &&
                     <FormHelperText error>Value must be greater than 0</FormHelperText>}
+    
+                    {this.state.form.errors.format &&
+                    <FormHelperText error>Invalid format. Value must be a number</FormHelperText>}
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={this.onCancelHandler}>Close</Button>

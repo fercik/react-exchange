@@ -10,18 +10,3 @@
     display: flex;
     flex: 1;
 }
-
-.result {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    font-size: 48px;
-    justify-content: center;
-    margin: 48px 0;
-}
-
-.result__icon {
-    font-size: 48px !important;
-    margin: 0 16px;
-}
