@@ -11,10 +11,10 @@ import { ResultComponent } from './result/result.component';
 import { CounterComponent } from './counter/counter.component';
 
 const initialState = {
-    fromPocket: null,
-    toPocket: null,
+    fromPocket: '',
+    toPocket: '',
     baseValue: 0,
-    exchangeRate: null,
+    exchangeRate: undefined,
     counter: 10,
 };
 
@@ -22,14 +22,6 @@ export class ExchangeComponent extends Component {
     
     state = initialState;
     intervalHandler = null;
-    
-    constructor(props) {
-        super(props);
-        
-        const { pocketsList } = props;
-        this.state.fromPocket = pocketsList[0];
-        this.state.toPocket = pocketsList[1];
-    }
     
     onClickHandler = () => {
         const { closeExchangeDialog, addTransaction, updatePocket } = this.props;
@@ -156,35 +148,38 @@ export class ExchangeComponent extends Component {
                                 onChange={this.onBaseCurrencyChangeHandler}
                                 fullWidth
                             >
-                                {pocketsList.map((pocket, index) => <MenuItem key={index}
-                                                                              value={pocket}>{pocket.label}</MenuItem>)}
+                                {pocketsList.map((pocket, index) =>
+                                    <MenuItem key={index}
+                                              value={pocket}
+                                    >{pocket.label}</MenuItem>)}
                             </Select>
                         </FormControl>
                         
-                        <FormControl
-                            className="controls__destination-currency"
-                            disabled={!this.state.fromPocket}
-                        >
+                        <FormControl className="controls__destination-currency">
                             <InputLabel>Destination currency</InputLabel>
                             <Select
                                 value={this.state.toPocket}
                                 onChange={this.onDestinationCurrencyChangeHandler}
                                 fullWidth
                             >
-                                {pocketsList.filter(pocket => pocket.id !== this.state.fromPocket.id).map((pocket, index) =>
-                                    <MenuItem key={index} value={pocket}>{pocket.label}</MenuItem>)}
+                                {this.state.fromPocket && pocketsList.filter(pocket => pocket.id !== this.state.fromPocket.id).map((pocket, index) =>
+                                    <MenuItem key={pocket.id} value={pocket}>{pocket.label}</MenuItem>)}
                             </Select>
                         </FormControl>
                     </div>
                     
-                    <ResultComponent
-                        baseValue={this.state.baseValue}
-                        destinationValue={this.getDestinationValue()}
-                        fromLabel={this.state.fromPocket.label}
-                        toLabel={this.state.toPocket.label}
-                    />
+                    {this.state.fromPocket && this.state.toPocket && this.state.baseValue > 0 &&
+                        <ResultComponent
+                            baseValue={this.state.baseValue}
+                            destinationValue={this.getDestinationValue()}
+                            fromLabel={this.state.fromPocket.label}
+                            toLabel={this.state.toPocket.label}
+                        />
+                    }
                     
-                    <CounterComponent currentTime={this.displayCounter()}/>
+                    {this.state.fromPocket && this.state.baseValue > 0 &&
+                        <CounterComponent currentTime={this.displayCounter()}/>
+                    }
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={this.onCancelHandler}>Close</Button>
