@@ -24,8 +24,8 @@ export class TopUpComponent extends Component {
     
     state = initialState;
     
-    onChangeHandler = topUpValue => event => {
-        this.setState({ [topUpValue]: event.target.value });
+    onChangeHandler = event => {
+        this.setState({ topUpValue: event.target.value });
     };
     
     onClickHandler = () => {
@@ -101,7 +101,7 @@ export class TopUpComponent extends Component {
                         id="top-up-value"
                         label="Top Up value"
                         value={this.state.topUpValue}
-                        onChange={this.onChangeHandler('topUpValue')}
+                        onChange={this.onChangeHandler}
                         onBlur={this.validateInput}
                         type="number"
                         fullWidth

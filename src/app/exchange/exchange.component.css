@@ -1,12 +1,3 @@
-.controls {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-}
-
-.controls__input,
-.controls__base-currency,
-.controls__destination-currency {
-    display: flex;
-    flex: 1;
+.control {
+    width: 50%;
 }

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import {
-    Button, Dialog, DialogActions, DialogContent,
-    DialogTitle, FormControl, Input, InputLabel,
-    MenuItem, Select
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    FormControl, FormHelperText,
+    Input,
+    InputLabel, MenuItem, Select,
 } from '@material-ui/core';
 import axios from 'axios';
 
@@ -11,11 +16,20 @@ import { ResultComponent } from './result/result.component';
 import { CounterComponent } from './counter/counter.component';
 
 const initialState = {
-    fromPocket: '',
-    toPocket: '',
-    baseValue: 0,
-    exchangeRate: undefined,
+    baseValue: 1,
+    destinationValue: 1,
+    selectedCurrency: '',
+    exchangeRate: 1,
     counter: 10,
+    disabled: {
+        confirmButton: true,
+    },
+    errors: {
+        minValue: false,
+        overBalance: false,
+        format: false,
+    },
+    isFormValid: false,
 };
 
 export class ExchangeComponent extends Component {
@@ -23,169 +37,173 @@ export class ExchangeComponent extends Component {
     state = initialState;
     intervalHandler = null;
     
-    onClickHandler = () => {
-        const { closeExchangeDialog, addTransaction, updatePocket } = this.props;
-        this.clearCounter();
-        
-        addTransaction(this.state.fromPocket, -this.state.baseValue, 'EXCHANGE');
-        addTransaction(this.state.toPocket, this.getDestinationValue(), 'EXCHANGE');
-        updatePocket(
-            this.state.fromPocket.id,
-            {
-                balance: Number(this.state.fromPocket.balance) - Number(this.state.baseValue)
-            }
-        );
-        updatePocket(
-            this.state.toPocket.id,
-            {
-                balance: Number(this.state.toPocket.balance) + Number(this.getDestinationValue())
-            }
-        );
-        
-        closeExchangeDialog();
+    clearState = () => {
         this.setState(initialState);
     };
     
-    onCancelHandler = () => {
-        const { closeExchangeDialog } = this.props;
-        closeExchangeDialog();
-        this.clearCounter();
-        this.setState(initialState);
-    };
-    
-    onBaseCurrencyChangeHandler = event => {
-        this.setState({ fromPocket: event.target.value });
-    };
-    
-    onDestinationCurrencyChangeHandler = event => {
-        this.setState({ toPocket: event.target.value });
-    };
-    
-    onValueChangeHandler = event => {
-        const value = parseFloat(event.target.value).toFixed(2);
+    startInterval = () => {
+        this.clearInterval();
         
-        if (!this.intervalHandler) {
-            this.setCounter();
-        }
-        
-        if (value < 0) {
-            return false;
-        }
-        
-        if (value > this.state.fromPocket.balance) {
-            return false;
-        }
-        
-        this.setState({ baseValue: event.target.value });
-    };
-    
-    getCurrentExchangeRate = () => {
-        axios
-            .get(`https://api.exchangeratesapi.io/latest?base=${this.state.fromPocket.id.toUpperCase()}`)
-            .then((result) => {
-                this.setState({ exchangeRate: result.data.rates[this.state.toPocket.id.toUpperCase()] });
-            });
-    };
-    
-    setCounter = () => {
         this.intervalHandler = setInterval(() => {
-            let val = this.state.counter;
+            let counter = this.state.counter;
             
-            if (!this.state.exchangeRate) {
-                this.getCurrentExchangeRate();
+            if (counter === 10) {
+                this.getExchangeRate();
             }
             
-            if (val === 0) {
-                this.getCurrentExchangeRate();
+            if (this.state.counter === 0) {
                 this.setState({ counter: 10 });
             } else {
-                this.setState({ counter: --val });
+                this.setState({ counter: --counter });
             }
         }, 1000);
     };
     
-    clearCounter = () => {
+    clearInterval = () => {
         clearInterval(this.intervalHandler);
         this.intervalHandler = null;
+        this.setState({ counter: 10 });
     };
     
-    displayCounter = () => {
-        return this.state.counter < 10
-            ? `0:0${this.state.counter}`
-            : `0:${this.state.counter}`;
+    closeDialog = () => {
+        const { closeExchangeDialog } = this.props;
+        closeExchangeDialog();
+        this.clearState();
     };
     
-    getDestinationValue = () => {
-        return (this.state.baseValue * this.state.exchangeRate).toFixed(2);
+    confirmDialog = () => {
+        const { closeExchangeDialog, onConfirm } = this.props;
+        
+        onConfirm(this.state.baseValue, this.state.destinationValue, this.state.selectedCurrency);
+        closeExchangeDialog();
+        this.clearState();
+        this.clearInterval();
+    };
+    
+    inputOnChangeHandler = event => {
+        const value = parseFloat(event.target.value).toFixed(2);
+        this.setState({ baseValue: value });
+        this.updateDestinationValue(value, this.state.exchangeRate);
+    };
+    
+    inputOnBlurHandler = event => {
+        const { fromPocket } = this.props;
+        const value = parseFloat(event.target.value).toFixed(2);
+        
+        if (value < 1) {
+            return this.setError('minValue', true);
+        }
+        
+        if (fromPocket.balance < value) {
+            return this.setError('overBalance', true);
+        }
+        
+        this.setState({ baseValue: value });
+        return this.clearErrors();
+    };
+    
+    selectOnChangeHandler = event => {
+        this.clearInterval();
+        this.setState({ selectedCurrency: event.target.value });
+        this.startInterval();
+    };
+    
+    setError = (key, value) => {
+        this.setState({ errors: { [key]: value }, disabled: { confirmButton: true}});
+    };
+    
+    clearErrors = () => {
+        this.setState({ errors: { minValue: false, overBalance: false, }});
+    };
+    
+    getExchangeRate = () => {
+        const { fromPocket } = this.props;
+        const base = fromPocket.id.toUpperCase();
+        const selectedCurrency = this.state.selectedCurrency;
+        const destination = selectedCurrency.id.toUpperCase();
+        
+        this.setState({ isFormValid: false, disabled: { confirmButton: true } });
+        
+        axios
+            .get(`https://api.exchangeratesapi.io/latest?base=${base}&symbols=${destination}`)
+            .then(result => {
+                const exchangeRate = result.data.rates[destination];
+                
+                this.setState({ exchangeRate });
+                this.updateDestinationValue(this.state.baseValue, exchangeRate);
+                
+                if (!this.state.errors.minValue && !this.state.errors.overBalance) {
+                    this.setState({ isFormValid: true, disabled: { confirmButton: false } });
+                }
+            });
+    };
+    
+    updateDestinationValue = (baseValue, exchangeRate) => {
+        this.setState({ destinationValue: Number(baseValue * exchangeRate).toFixed(2) });
     };
     
     render = () => {
-        const { isDialogVisible, pocketsList } = this.props;
+        const { isDialogOpened, pocketsList, fromPocket } = this.props;
         
         return (
             <Dialog
-                open={isDialogVisible}
+                open={isDialogOpened}
                 fullWidth={true}
                 maxWidth='sm'
             >
                 <DialogTitle>Exchange</DialogTitle>
                 <DialogContent>
-                    <div className="controls">
-                        <FormControl className="controls__input">
+                    <div>
+                        <FormControl className="control">
                             <InputLabel>Value</InputLabel>
                             <Input
-                                value={this.state.baseValue}
-                                onChange={this.onValueChangeHandler}
-                                fullWidth
                                 type="number"
+                                onChange={this.inputOnChangeHandler}
+                                onBlur={this.inputOnBlurHandler}
                             />
+                            
+                            {this.state.errors.minValue &&
+                                <FormHelperText error>Value must be greater than 0</FormHelperText>
+                            }
+    
+                            {this.state.errors.overBalance &&
+                                <FormHelperText error>Value is greater than pocket balance</FormHelperText>
+                            }
                         </FormControl>
                         
-                        <FormControl className="controls__base-currency">
-                            <InputLabel>Base currency</InputLabel>
-                            <Select
-                                value={this.state.fromPocket}
-                                onChange={this.onBaseCurrencyChangeHandler}
-                                fullWidth
-                            >
-                                {pocketsList.map((pocket, index) =>
-                                    <MenuItem key={index}
-                                              value={pocket}
-                                    >{pocket.label}</MenuItem>)}
-                            </Select>
-                        </FormControl>
-                        
-                        <FormControl className="controls__destination-currency">
+                        <FormControl className="control">
                             <InputLabel>Destination currency</InputLabel>
                             <Select
-                                value={this.state.toPocket}
-                                onChange={this.onDestinationCurrencyChangeHandler}
-                                fullWidth
+                                value={this.state.selectedCurrency}
+                                onChange={this.selectOnChangeHandler}
                             >
-                                {this.state.fromPocket && pocketsList.filter(pocket => pocket.id !== this.state.fromPocket.id).map((pocket, index) =>
-                                    <MenuItem key={pocket.id} value={pocket}>{pocket.label}</MenuItem>)}
+                                {pocketsList
+                                    .filter(pocket => pocket.id !== fromPocket.id)
+                                    .map(pocket => <MenuItem key={pocket.id} value={pocket}>{pocket.label}</MenuItem>)
+                                }
                             </Select>
                         </FormControl>
                     </div>
                     
-                    {this.state.fromPocket && this.state.toPocket && this.state.baseValue > 0 &&
+                    {this.state.selectedCurrency &&
                         <ResultComponent
                             baseValue={this.state.baseValue}
-                            destinationValue={this.getDestinationValue()}
-                            fromLabel={this.state.fromPocket.label}
-                            toLabel={this.state.toPocket.label}
+                            fromLabel={fromPocket.label}
+                            toLabel={this.state.selectedCurrency.label}
+                            destinationValue={this.state.destinationValue}
                         />
                     }
-                    
-                    {this.state.fromPocket && this.state.baseValue > 0 &&
-                        <CounterComponent currentTime={this.displayCounter()}/>
+    
+                    {this.state.selectedCurrency &&
+                        <CounterComponent currentTime={this.state.counter} />
                     }
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={this.onCancelHandler}>Close</Button>
+                    <Button onClick={this.closeDialog}>Close</Button>
                     <Button
                         color='secondary'
-                        onClick={this.onClickHandler}
+                        onClick={this.confirmDialog}
+                        disabled={this.state.disabled.confirmButton}
                     >
                         Exchange
                     </Button>

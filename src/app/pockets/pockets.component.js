@@ -13,6 +13,10 @@ export class PocketsComponent extends Component {
         this.setState({ currentTab: value });
     };
     
+    getPocket = (pocketsList) => {
+        return pocketsList[this.state.currentTab];
+    };
+    
     render = () => {
         const { pockets, addTransaction, updatePocket, openExchangeDialog } = this.props;
         
@@ -25,7 +29,8 @@ export class PocketsComponent extends Component {
                     {pockets.map((pocket, index) => <Tab key={index} label={pocket.label}/>)}
                 </Tabs>
                 <PocketItemComponent
-                    pocket={pockets[this.state.currentTab]}
+                    pocket={this.getPocket(pockets)}
+                    pocketsList={pockets}
                     addTransaction={addTransaction}
                     updatePocket={updatePocket}
                     openExchangeDialog={openExchangeDialog}
