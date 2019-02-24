@@ -153,27 +153,29 @@ export class ExchangeComponent extends Component {
                         <FormControl className="control">
                             <InputLabel>Value</InputLabel>
                             <Input
+                                className="base-value"
                                 type="number"
                                 onChange={this.inputOnChangeHandler}
                                 onBlur={this.inputOnBlurHandler}
                             />
                             
                             {this.state.errors.minValue &&
-                                <FormHelperText error>Value must be greater than 0</FormHelperText>
+                                <FormHelperText className="minValue" error>Value must be greater than 0</FormHelperText>
                             }
     
                             {this.state.errors.overBalance &&
-                                <FormHelperText error>Value is greater than pocket balance</FormHelperText>
+                                <FormHelperText className="overBalance" error>Value is greater than pocket balance</FormHelperText>
                             }
     
                             {this.state.errors.format &&
-                                <FormHelperText error>Value must be a number</FormHelperText>
+                                <FormHelperText className="format" error>Value must be a number</FormHelperText>
                             }
                         </FormControl>
                         
                         <FormControl className="control">
                             <InputLabel>Destination currency</InputLabel>
                             <Select
+                                className="destination-currency"
                                 value={this.state.selectedCurrency}
                                 onChange={this.selectOnChangeHandler}
                             >
