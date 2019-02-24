@@ -10,6 +10,12 @@ it('should render without errors', () => {
         baseValue: 10,
         destinationValue: 15,
     };
+    const expectedProps = {
+        toLabel: 'EUR',
+        fromLabel: 'GBP',
+        baseValue: '10.00',
+        destinationValue: '15.00',
+    };
     const wrapper = render(
         <ResultComponent
             toLabel={props.toLabel}
@@ -19,6 +25,6 @@ it('should render without errors', () => {
         />
     );
     
-    expect(wrapper.find('.left').text()).toEqual(`${props.baseValue} ${props.fromLabel}`);
-    expect(wrapper.find('.right').text()).toEqual(`${props.destinationValue} ${props.toLabel}`);
+    expect(wrapper.find('.left').text()).toEqual(`${expectedProps.baseValue} ${expectedProps.fromLabel}`);
+    expect(wrapper.find('.right').text()).toEqual(`${expectedProps.destinationValue} ${expectedProps.toLabel}`);
 });

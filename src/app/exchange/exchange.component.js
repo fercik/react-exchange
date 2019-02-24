@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
-    FormControl, FormHelperText,
-    Input,
+    Button, Dialog, DialogActions, DialogContent,
+    DialogTitle, FormControl, FormHelperText, Input,
     InputLabel, MenuItem, Select,
 } from '@material-ui/core';
 import axios from 'axios';
@@ -69,6 +64,7 @@ export class ExchangeComponent extends Component {
         const { closeExchangeDialog } = this.props;
         closeExchangeDialog();
         this.clearState();
+        this.clearInterval();
     };
     
     confirmDialog = () => {
@@ -88,7 +84,11 @@ export class ExchangeComponent extends Component {
     
     inputOnBlurHandler = event => {
         const { fromPocket } = this.props;
-        const value = parseFloat(event.target.value).toFixed(2);
+        const value = parseFloat(event.target.value);
+        
+        if (Number.isNaN(value)) {
+            return this.setError('format', true);
+        }
         
         if (value < 1) {
             return this.setError('minValue', true);
@@ -98,7 +98,7 @@ export class ExchangeComponent extends Component {
             return this.setError('overBalance', true);
         }
         
-        this.setState({ baseValue: value });
+        this.setState({ baseValue: value, disabled: { confirmButton: !value || !this.state.selectedCurrency } });
         return this.clearErrors();
     };
     
@@ -109,11 +109,11 @@ export class ExchangeComponent extends Component {
     };
     
     setError = (key, value) => {
-        this.setState({ errors: { [key]: value }, disabled: { confirmButton: true}});
+        this.setState({ errors: { [key]: value }, disabled: { confirmButton: true }});
     };
     
     clearErrors = () => {
-        this.setState({ errors: { minValue: false, overBalance: false, }});
+        this.setState({ errors: { minValue: false, overBalance: false, format: false }});
     };
     
     getExchangeRate = () => {
@@ -122,19 +122,15 @@ export class ExchangeComponent extends Component {
         const selectedCurrency = this.state.selectedCurrency;
         const destination = selectedCurrency.id.toUpperCase();
         
-        this.setState({ isFormValid: false, disabled: { confirmButton: true } });
+        this.setState({ disabled: { confirmButton: true } });
         
         axios
             .get(`https://api.exchangeratesapi.io/latest?base=${base}&symbols=${destination}`)
             .then(result => {
                 const exchangeRate = result.data.rates[destination];
                 
-                this.setState({ exchangeRate });
+                this.setState({ exchangeRate, disabled: { confirmButton: !this.state.baseValue && !this.state.selectedCurrency } });
                 this.updateDestinationValue(this.state.baseValue, exchangeRate);
-                
-                if (!this.state.errors.minValue && !this.state.errors.overBalance) {
-                    this.setState({ isFormValid: true, disabled: { confirmButton: false } });
-                }
             });
     };
     
@@ -168,6 +164,10 @@ export class ExchangeComponent extends Component {
     
                             {this.state.errors.overBalance &&
                                 <FormHelperText error>Value is greater than pocket balance</FormHelperText>
+                            }
+    
+                            {this.state.errors.format &&
+                                <FormHelperText error>Value must be a number</FormHelperText>
                             }
                         </FormControl>
                         
