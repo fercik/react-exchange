@@ -1,3 +1,5 @@
+[![Travis build](https://travis-ci.org/fercik/react-exchange.svg?branch=master)](https://travis-ci.org/fercik/react-exchange)
+
 This project was bootstrapped with [Create React AppComponent](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
