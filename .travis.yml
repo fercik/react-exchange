@@ -1,7 +1,10 @@
 language: node_js
 node_js:
     - "10"
-  
+
+git:
+    depth: 1
+
 script:
     - CI=true npm run test:ci
     - npm run build
