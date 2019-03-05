@@ -27,6 +27,14 @@ const initialState = {
     isFormValid: false,
 };
 
+function convertToBase(data, currency) {
+    return 1 / data[currency];
+}
+
+function convert(data, baseCurrency, destinationCurrency) {
+    return convertToBase(baseCurrency) * data[destinationCurrency]
+}
+
 export class ExchangeComponent extends Component {
     
     state = initialState;

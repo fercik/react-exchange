@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './app.css';
+import './app.component.css';
 import { PocketsContainer } from './pockets/pockets.container';
 
 export const AppComponent = () => (
