@@ -3,5 +3,5 @@ node_js:
     - "10"
   
 script:
-    - npm test
+    - CI=true npm test
     - npm run build
