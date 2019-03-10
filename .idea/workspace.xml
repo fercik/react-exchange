@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68e60762-d355-4086-90f7-60b1c6e5c281" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/exchange/exchange.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/exchange.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/initital-state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/initital-state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,11 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="43">
+              <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -87,7 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pockets/item/item.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.container.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.actions.js" />
@@ -138,6 +136,7 @@
         <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.js" />
         <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -248,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.eject">
     <configuration name="CounterComponent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -304,8 +303,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.eject" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.CounterComponent" />
         <item itemvalue="npm.test:ci" />
@@ -448,7 +447,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551014043351</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Refactor">
+      <created>1552247247461</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552247247461</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refactor">
+      <created>1552247289414</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552247289414</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -484,13 +497,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109289000" />
+    <option name="totallyTimeSpent" value="109424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4832714" visible="true" weight="0.26824033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4832714" visible="true" weight="0.26824033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.51672864" side_tool="true" weight="0.26824033" />
       <window_info id="aws.explorer" order="3" side_tool="true" />
@@ -498,7 +511,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.35180724" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.35180724" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.35421687" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4993113" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50214595" side_tool="true" weight="0.35180724" />
@@ -552,14 +565,13 @@
     <MESSAGE value="Add styles" />
     <MESSAGE value="Pull data from server" />
     <MESSAGE value="Tests, refactor" />
-    <MESSAGE value="Refactor" />
     <MESSAGE value="Exchange" />
     <MESSAGE value="Fix bugs" />
     <MESSAGE value="Exchange component tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exchange component tests" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.js" />
     <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.actions.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -853,8 +865,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="43">
+          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
