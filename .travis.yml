@@ -7,4 +7,3 @@ git:
 
 script:
     - CI=true npm run test:ci
-    - npm run build
