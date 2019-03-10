@@ -38,9 +38,6 @@
             "!**/node_modules/**",
             "!**/coverage/**",
             "!**/src/*.js"
-        ],
-        "setupFilesAfterEnv": [
-            "./src/setupTests.js"
         ]
     }
 }
