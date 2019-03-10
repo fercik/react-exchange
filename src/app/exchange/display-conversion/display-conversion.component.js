@@ -8,11 +8,11 @@ export function DisplayConversionComponent({ fromPocket, value, toPocket, conver
     return (
         <div className="display-conversion">
             <span className="display-conversion__from">
-                {formatCurrency(fromPocket.locale, fromPocket.id, value)} {fromPocket.label}
+                {formatCurrency(fromPocket.id, value)}
             </span>
             <SwapHoriz className="display-conversion__icon"/>
             <span className="display-conversion__to">
-                {formatCurrency(toPocket.locale, toPocket.id, convertedValue)} {toPocket.label}
+                {formatCurrency(toPocket.id, convertedValue)}
             </span>
         </div>
     );

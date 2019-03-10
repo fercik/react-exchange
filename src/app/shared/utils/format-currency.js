@@ -1,7 +1,10 @@
-export function formatCurrency(locale, currency, value) {
-    return new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: currency,
-        minimumFractionDigits: 2
-    }).format(value);
+export function formatCurrency(currency, value) {
+    return new Intl
+        .NumberFormat('en-US', {
+            style: 'currency',
+            currency: currency,
+            currencyDisplay: 'symbol',
+            minimumFractionDigits: 2,
+        })
+        .format(value);
 }
