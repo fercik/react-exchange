@@ -1,41 +1,34 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Tab, Tabs } from '@material-ui/core';
 
-import PocketItemComponent from './pockets-item.component';
+import { PocketItemComponent } from './pockets-item.component';
 
-export class PocketsComponent extends Component {
+export function PocketsComponent({ pockets, addTransaction, updatePocket, openExchangeDialog }) {
+    const [currentTab, setCurrentTab] = useState(0);
     
-    state = {
-        currentTab: 0,
-    };
+    function tabChangeHandler(event, value) {
+        setCurrentTab(value);
+    }
     
-    onChangeHandler = (event, value) => {
-        this.setState({ currentTab: value });
-    };
+    function getPocket(pockets) {
+        return pockets[currentTab];
+    }
     
-    getPocket = (pocketsList) => {
-        return pocketsList[this.state.currentTab];
-    };
-    
-    render = () => {
-        const { pockets, addTransaction, updatePocket, openExchangeDialog } = this.props;
-        
-        return (
-            <div>
-                <Tabs
-                    value={this.state.currentTab}
-                    onChange={this.onChangeHandler}
-                >
-                    {pockets.map((pocket, index) => <Tab key={index} label={pocket.label}/>)}
-                </Tabs>
-                <PocketItemComponent
-                    pocket={this.getPocket(pockets)}
-                    pocketsList={pockets}
-                    addTransaction={addTransaction}
-                    updatePocket={updatePocket}
-                    openExchangeDialog={openExchangeDialog}
-                />
-            </div>
-        );
-    };
+    return (
+        <div>
+            <Tabs
+                value={currentTab}
+                onChange={tabChangeHandler}
+            >
+                {pockets.map(pocket => <Tab key={pocket.id} label={pocket.label}/>)}
+            </Tabs>
+            <PocketItemComponent
+                pocket={getPocket(pockets)}
+                pocketsList={pockets}
+                addTransaction={addTransaction}
+                updatePocket={updatePocket}
+                openExchangeDialog={openExchangeDialog}
+            />
+        </div>
+    );
 }

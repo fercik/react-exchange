@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { Button, Card, CardActions, CardContent, Typography, withStyles } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
 
 import { TransactionsContainer } from '../transactions/transactions.container';
 import { TopUpComponent } from '../top-up/top-up.component';
 import { ExchangeComponent } from '../exchange/exchange.component';
+import { formatCurrency } from '../shared/utils/format-currency';
 
-const styles = () => ({
+const styles = {
     card: {
         marginTop: '16px',
     },
@@ -15,99 +16,72 @@ const styles = () => ({
         padding: '64px',
         textAlign: 'center',
     }
-});
+};
 
-class PocketItemComponent extends Component {
+export function PocketItemComponent({ pocket, pocketsList, addTransaction, updatePocket }) {
+    const [isTopUpDialogOpened, setTopUpDialogOpened] = useState(false);
+    const [isExchangeDialogOpened, setExchangeDialogOpened] = useState(false);
     
-    state = {
-        isTopUpDialogOpened: false,
-        isExchangeDialogOpened: false,
-    };
+    function openTopUpDialog() {
+        setTopUpDialogOpened(true);
+    }
     
-    openTopUpDialog = () => {
-        this.setState({ isTopUpDialogOpened: true });
-    };
+    function openExchangeDialog() {
+        setExchangeDialogOpened(true);
+    }
     
-    closeTopUpDialog = () => {
-        this.setState({ isTopUpDialogOpened: false });
-    };
+    function onTopUpConfirm(value) {
+        addTransaction(pocket, value, 'TOP_UP');
+        updatePocket(pocket.id, { balance: parseFloat(pocket.balance) + parseFloat(value) });
+        setTopUpDialogOpened(false);
+    }
     
-    onTopUpConfirm = (topUpValue) => {
-        const { pocket, addTransaction, updatePocket } = this.props;
+    function onTopUpCancel() {
+        setTopUpDialogOpened(false);
+    }
+    
+    function onExchangeConfirm(value, convertedValue, toPocket) {
+        addTransaction(pocket, -value, 'EXCHANGE');
+        addTransaction(toPocket, convertedValue, 'EXCHANGE');
+        updatePocket(pocket.id, { balance: Number(pocket.balance - value) });
+        updatePocket(toPocket.id, { balance: Number(toPocket.balance + convertedValue) });
+        setExchangeDialogOpened(false);
+    }
+    
+    function onExchangeCancel() {
+        setExchangeDialogOpened(false);
+    }
+    
+    return (
+        <Card style={styles.card}>
+            <div>
+                <Typography variant="h3" style={styles.header}>
+                    {formatCurrency(pocket.id, pocket.balance)}
+                </Typography>
+            </div>
+            <CardActions>
+                <Button color="inherit" onClick={openTopUpDialog}>Top Up</Button>
+                <Button color="inherit" onClick={openExchangeDialog}>Exchange</Button>
+            </CardActions>
+            <CardContent>
+                <TransactionsContainer pocketId={pocket.id}/>
+            </CardContent>
         
-        addTransaction(pocket, topUpValue, 'TOP_UP');
-        updatePocket(
-            pocket.id,
-            {
-                balance: parseFloat(pocket.balance) + parseFloat(topUpValue),
+            {isTopUpDialogOpened &&
+            <TopUpComponent
+                onConfirm={onTopUpConfirm}
+                onCancel={onTopUpCancel}
+            />
             }
-        );
-        this.closeTopUpDialog();
-    };
-    
-    onTopUpCancel = () => {
-        this.closeTopUpDialog();
-    };
-    
-    openExchangeDialog = () => {
-        this.setState({ isExchangeDialogOpened: true });
-    };
-    
-    closeExchangeDialog = () => {
-        this.setState({ isExchangeDialogOpened: false });
-    };
-    
-    onExchangeConfirm = (baseValue, destinationValue, toPocket) => {
-        const { pocket, addTransaction, updatePocket } = this.props;
         
-        addTransaction(pocket, -baseValue, 'EXCHANGE');
-        addTransaction(toPocket, destinationValue, 'EXCHANGE');
-        updatePocket(pocket.id, { balance: Number(pocket.balance - baseValue) });
-        updatePocket(toPocket.id, { balance: Number(toPocket.balance + destinationValue) });
-    };
-    
-    displayPocketBalance = (symbol, balance) => {
-        return `${symbol} ${Number(balance).toFixed(2)}`;
-    };
-    
-    render = () => {
-        const { pocket, pocketsList, classes } = this.props;
-        
-        return (
-            <Card className={classes.card}>
-                <div>
-                    <Typography
-                        variant="h3"
-                        className={classes.header}
-                    >
-                        {this.displayPocketBalance(pocket.symbol, pocket.balance)}
-                    </Typography>
-                </div>
-                <CardActions>
-                    <Button color="inherit" onClick={this.openTopUpDialog}>Top Up</Button>
-                    <Button color="inherit" onClick={this.openExchangeDialog}>Exchange</Button>
-                </CardActions>
-                <CardContent>
-                    <TransactionsContainer pocketId={pocket.id}/>
-                </CardContent>
-                
-                {this.state.isTopUpDialogOpened &&
-                <TopUpComponent
-                    onConfirm={this.onTopUpConfirm}
-                    onCancel={this.onTopUpCancel}
-                />
-                }
-                
-                <ExchangeComponent
-                    isDialogOpened={this.state.isExchangeDialogOpened}
-                    fromPocket={pocket}
-                    pocketsList={pocketsList}
-                    closeExchangeDialog={this.closeExchangeDialog}
-                    onConfirm={this.onExchangeConfirm}
-                />
-            </Card>
-        );
-    };
+            {isExchangeDialogOpened &&
+            <ExchangeComponent
+                fromPocket={pocket}
+                pocketsList={pocketsList}
+                onCancel={onExchangeCancel}
+                onConfirm={onExchangeConfirm}
+            />
+            }
+        </Card>
+    );
 }
-
-export default withStyles(styles)(PocketItemComponent);

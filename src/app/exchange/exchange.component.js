@@ -61,17 +61,17 @@ export class ExchangeComponent extends Component {
     };
     
     closeDialog = () => {
-        const { closeExchangeDialog } = this.props;
-        closeExchangeDialog();
+        const { onCancel } = this.props;
+        onCancel();
         this.clearState();
         this.clearInterval();
     };
     
     confirmDialog = () => {
-        const { closeExchangeDialog, onConfirm } = this.props;
+        const { onCancel, onConfirm } = this.props;
         
         onConfirm(this.state.baseValue, this.state.destinationValue, this.state.selectedCurrency);
-        closeExchangeDialog();
+        onCancel();
         this.clearState();
         this.clearInterval();
     };
@@ -139,11 +139,11 @@ export class ExchangeComponent extends Component {
     };
     
     render = () => {
-        const { isDialogOpened, pocketsList, fromPocket } = this.props;
+        const { pocketsList, fromPocket } = this.props;
         
         return (
             <Dialog
-                open={isDialogOpened}
+                open={true}
                 fullWidth={true}
                 maxWidth='sm'
             >
