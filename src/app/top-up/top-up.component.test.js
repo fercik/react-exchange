@@ -1,62 +1,69 @@
 import React from 'react';
+import { FormHelperText } from '@material-ui/core';
 import { mount } from 'enzyme';
 
 import { TopUpComponent } from './top-up.component';
-import { FormHelperText } from '@material-ui/core';
 
-it('should render opened', () => {
-    const props = {
-        isDialogOpened: true,
-    };
-    const wrapper = mount(<TopUpComponent isDialogOpened={props.isDialogOpened}/>);
+describe('TopUpComponent', () => {
+    let wrapper = null;
     
-    expect(wrapper.props().isDialogOpened).toEqual(true);
-});
-
-it('should show and hide error', () => {
-    const props = {
-        isDialogOpened: true,
-    };
-    const wrapper = mount(<TopUpComponent isDialogOpened={props.isDialogOpened}/>);
+    beforeEach(() => {
+        wrapper = mount(<TopUpComponent />);
+    });
     
-    wrapper.setState({ topUpValue: -1 });
-    wrapper.instance().validateInput();
-    wrapper.update();
+    it('should show MIN VALUE error', () => {
+        const inputElement = wrapper.find('input');
+        const minValueErrorElement = wrapper.find('.min-value-error');
+        
+        inputElement.value = -12;
+        inputElement.simulate('blur');
+        wrapper = wrapper.update();
+        // expect(minValueErrorElement.length).toBe(1);
+        expect(minValueErrorElement.exists()).toBe(true);
+    });
     
-    expect(wrapper.state().form.errors.minValue).toEqual(true);
-    expect(wrapper.find(FormHelperText).exists()).toEqual(true);
+    xit('should show and hide error', () => {
+        const wrapper = mount(<TopUpComponent />);
+        
+        wrapper.find('input').first().
+        wrapper.setState({ topUpValue: -1 });
+        wrapper.instance().validateInput();
+        wrapper.update();
+        
+        expect(wrapper.state().form.errors.minValue).toEqual(true);
+        expect(wrapper.find(FormHelperText).exists()).toEqual(true);
+        
+        wrapper.setState({ topUpValue: 100 });
+        wrapper.instance().validateInput();
+        wrapper.update();
+        
+        expect(wrapper.state().form.errors.minValue).toEqual(false);
+        expect(wrapper.find(FormHelperText).exists()).toEqual(false);
+    });
     
-    wrapper.setState({ topUpValue: 100 });
-    wrapper.instance().validateInput();
-    wrapper.update();
+    xit('should clear state after CANCEL or TOP UP', () => {
+        const props = {
+            onConfirm: (value) => {},
+            onCancel: () => {},
+        };
+        const wrapper = mount(
+            <TopUpComponent
+                onConfirm={props.onConfirm}
+                onCancel={props.onCancel}
+            />
+        );
+        
+        wrapper.setState({ topUpValue: 200 });
+        expect(wrapper.state().value).toEqual(200);
+        
+        wrapper.instance().onClickHandler();
+        expect(wrapper.state().value).toEqual(100);
+        
+        wrapper.setState({ value: 200 });
+        expect(wrapper.state().topUpValue).toEqual(200);
+        
+        wrapper.instance().onCancelHandler();
+        expect(wrapper.state().topUpValue).toEqual(100);
+    });
     
-    expect(wrapper.state().form.errors.minValue).toEqual(false);
-    expect(wrapper.find(FormHelperText).exists()).toEqual(false);
-});
-
-it('should clear state after CANCEL or TOP UP', () => {
-    const props = {
-        isDialogOpened: true,
-        onConfirm: (value) => {},
-        onCancel: () => {},
-    };
-    const wrapper = mount(
-        <TopUpComponent
-            isDialogOpened={props.isDialogOpened}
-            onConfirm={props.onConfirm}
-            onCancel={props.onCancel}
-        />
-    );
-    
-    wrapper.setState({ topUpValue: 200 });
-    expect(wrapper.state().topUpValue).toEqual(200);
-    
-    wrapper.instance().onClickHandler();
-    expect(wrapper.state().topUpValue).toEqual(100);
-    
-    wrapper.setState({ topUpValue: 200 });
-    expect(wrapper.state().topUpValue).toEqual(200);
-    
-    wrapper.instance().onCancelHandler();
-    expect(wrapper.state().topUpValue).toEqual(100);
 });

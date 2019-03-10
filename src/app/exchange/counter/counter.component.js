@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const CounterComponent = ({ currentTime }) => (
-    <div>
-        Exchange rate will change in {currentTime} seconds
-    </div>
-);
+export function CounterComponent({ currentTime }) {
+    return (
+        <div>
+            Exchange rate will change in {currentTime} seconds
+        </div>
+    );
+}

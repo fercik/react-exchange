@@ -91,11 +91,12 @@ class PocketItemComponent extends Component {
                     <TransactionsContainer pocketId={pocket.id}/>
                 </CardContent>
                 
+                {this.state.isTopUpDialogOpened &&
                 <TopUpComponent
-                    isDialogOpened={this.state.isTopUpDialogOpened}
                     onConfirm={this.onTopUpConfirm}
                     onCancel={this.onTopUpCancel}
                 />
+                }
                 
                 <ExchangeComponent
                     isDialogOpened={this.state.isExchangeDialogOpened}

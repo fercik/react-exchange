@@ -7,6 +7,7 @@ export const initialState = {
                 currency: 'GBP',
                 symbol: '£',
                 balance: 0,
+                locale: 'en_GB'
             },
             {
                 id: 'eur',
@@ -14,6 +15,7 @@ export const initialState = {
                 currency: 'EUR',
                 symbol: '€',
                 balance: 0,
+                locale: 'de_DE'
             },
             {
                 id: 'usd',
@@ -21,6 +23,7 @@ export const initialState = {
                 currency: 'USD',
                 symbol: '$',
                 balance: 0,
+                locale: 'en_US'
             },
         ],
     },

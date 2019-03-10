@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import {
     Button,
     Dialog,
@@ -9,118 +9,84 @@ import {
     TextField
 } from '@material-ui/core';
 
-const initialState = {
-    topUpValue: 100,
-    form: {
-        errors: {
-            minValue: false,
-            format: false,
-        },
-        isValid: true,
-    },
-};
-
-export class TopUpComponent extends Component {
-    
-    state = initialState;
-    
-    onChangeHandler = event => {
-        this.setState({ topUpValue: event.target.value });
+export function TopUpComponent({ onConfirm, onCancel }) {
+    const [value, setValue] = useState(100);
+    const [inputValue, setInputValue] = useState(100);
+    const [minValueError, setMinValueError] = useState(false);
+    const [formatError, setFormatError] = useState(false);
+    const inputProps = {
+        min: 0,
     };
     
-    onClickHandler = () => {
-        const { onConfirm } = this.props;
-        onConfirm(this.state.topUpValue);
-        this.clearState();
-    };
+    function valueInputChangeHandler(event) {
+        setInputValue(event.target.value);
+    }
     
-    onCancelHandler = () => {
-        const { onCancel } = this.props;
-        onCancel();
-        this.clearState();
-    };
+    function valueInputBlurHandler(event) {
+        validateInput(event.target.value);
+    }
     
-    clearState = () => {
-        this.setState(initialState);
-    };
-    
-    setMinValueError = (hasError) => {
-        this.setState({
-            form: {
-                errors: {
-                    minValue: hasError,
-                },
-                isValid: !hasError,
-            },
-        });
-    };
-    
-    setFormatError = (isWrongFormat) => {
-        this.setState({
-            form: {
-                errors: {
-                    format: isWrongFormat,
-                },
-                isValid: !isWrongFormat,
-            },
-        });
-    };
-    
-    clearErrors = () => {
-        this.setFormatError(false);
-        this.setMinValueError(false);
-    };
-    
-    validateInput = () => {
-        const val = parseFloat(this.state.topUpValue).toFixed(2);
+    function validateInput(inputValue) {
+        const val = parseFloat(inputValue);
         
         if (!val) {
-            return this.setFormatError(true);
+            return setFormatError(true);
         }
         
         if (val <= 0) {
-            return this.setMinValueError(true);
+            return setMinValueError(true);
         }
         
-        this.setState({ topUpValue: val });
-        return this.clearErrors();
-    };
+        setValue(val);
+        return clearErrors();
+    }
     
-    render = () => {
-        const { isDialogOpened } = this.props;
-        
-        return (
-            <Dialog
-                open={isDialogOpened}
-                fullWidth={true}
-                maxWidth='sm'
-            >
-                <DialogTitle>Top up your pocket</DialogTitle>
-                <DialogContent>
-                    <TextField
-                        id="top-up-value"
-                        label="Top Up value"
-                        value={this.state.topUpValue}
-                        onChange={this.onChangeHandler}
-                        onBlur={this.validateInput}
-                        type="number"
-                        fullWidth
-                    />
-                    {this.state.form.errors.minValue &&
-                    <FormHelperText error>Value must be greater than 0</FormHelperText>}
+    function clearErrors() {
+        setMinValueError(false);
+        setFormatError(false);
+    }
     
-                    {this.state.form.errors.format &&
-                    <FormHelperText error>Invalid format. Value must be a number</FormHelperText>}
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={this.onCancelHandler}>Close</Button>
-                    <Button
-                        color="secondary"
-                        onClick={this.onClickHandler}
-                        disabled={!this.state.form.isValid}
-                    >Top Up</Button>
-                </DialogActions>
-            </Dialog>
-        );
-    };
+    function isFormInvalid() {
+        return minValueError || formatError;
+    }
+    
+    function confirmButtonClickHandler() {
+        onConfirm(value);
+    }
+    
+    function cancelButtonClickHandler() {
+        onCancel();
+    }
+    
+    return (
+        <Dialog
+            open={true}
+            fullWidth={true}
+            maxWidth='sm'
+        >
+            <DialogTitle>Top up your pocket</DialogTitle>
+            <DialogContent>
+                <TextField
+                    id="top-up-value"
+                    label="Top Up value"
+                    value={inputValue}
+                    onChange={valueInputChangeHandler}
+                    onBlur={valueInputBlurHandler}
+                    type="number"
+                    inputProps={inputProps}
+                    fullWidth
+                />
+                {minValueError && <FormHelperText className="min-value-error" error>Value must be greater than 0</FormHelperText>}
+                {formatError && <FormHelperText className="format-error" error>Invalid format. Value must be a number</FormHelperText>}
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={cancelButtonClickHandler}>Close</Button>
+                <Button
+                    color="secondary"
+                    onClick={confirmButtonClickHandler}
+                    disabled={isFormInvalid()}
+                >Top Up</Button>
+            </DialogActions>
+        </Dialog>
+    );
 }

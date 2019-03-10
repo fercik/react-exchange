@@ -3,14 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="68e60762-d355-4086-90f7-60b1c6e5c281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/exchange/exchange.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exchange/exchange.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/initital-state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/initital-state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,26 +32,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+            <state relative-caret-position="188">
+              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/coverage/lcov-report/app/index.html">
+        <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="412">
+              <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -57,31 +51,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js">
+        <entry file="file://$PROJECT_DIR$/src/setupTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+            <state relative-caret-position="196">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#14#81#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
+        <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="1049">
+              <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -91,8 +76,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -102,10 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.component.css" />
-        <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.reducer.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/top-up/top-up.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/transactions/item/item.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/item/item.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.container.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.component.js" />
@@ -126,32 +107,36 @@
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.reducer.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.css" />
-        <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" />
-        <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions-item.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/select-item/select-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/select-items/select-items.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/rate/rate.component.js" />
-        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.container.js" />
         <option value="$PROJECT_DIR$/src/app/app.reducer.js" />
-        <option value="$PROJECT_DIR$/src/app/initital-state.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.css" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/app.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/app.component.js" />
         <option value="$PROJECT_DIR$/src/setupTests.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
-        <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/shared/utils/convert-currency.js" />
+        <option value="$PROJECT_DIR$/src/app/shared/utils/format-currency.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.css" />
+        <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/app.component.js" />
+        <option value="$PROJECT_DIR$/src/app/initital-state.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
+        <option value="$PROJECT_DIR$/src/app/app.test.js" />
+        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.js" />
+        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -168,8 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,12 +183,35 @@
               <item name="exchange" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pockets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exchange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exchange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="top-up" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exchange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="transactions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,31 +248,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.test:ci">
-    <configuration name="Transactions actions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="CounterComponent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
+      <test-file value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" />
       <test-names>
-        <test-name value="Transactions actions" />
+        <test-name value="CounterComponent" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Transactions reducer" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
-      <test-names>
-        <test-name value="Transactions reducer" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -301,11 +304,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:ci" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.Transactions actions" />
-        <item itemvalue="Jest.Transactions reducer" />
+        <item itemvalue="npm.eject" />
         <item itemvalue="npm.start" />
+        <item itemvalue="Jest.CounterComponent" />
+        <item itemvalue="npm.test:ci" />
       </list>
     </recent_temporary>
   </component>
@@ -449,9 +452,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 11m 30s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="Transactions_reducer - 2019.03.03 at 01h 13m 14s.xml">
       <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
@@ -479,24 +479,27 @@
     <history-entry file="Transactions_actions - 2019.03.05 at 23h 44m 48s.xml">
       <configuration name="Transactions actions" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="CounterComponent - 2019.03.10 at 17h 18m 25s.xml">
+      <configuration name="CounterComponent" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101537000" />
+    <option name="totallyTimeSpent" value="109289000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48433736" visible="true" weight="0.26466382" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4832714" visible="true" weight="0.26824033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.51566267" side_tool="true" weight="0.25751072" />
+      <window_info id="npm" order="2" sideWeight="0.51672864" side_tool="true" weight="0.26824033" />
       <window_info id="aws.explorer" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.35180724" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.16831073" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.35421687" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4993113" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50214595" side_tool="true" weight="0.35180724" />
       <window_info anchor="bottom" id="Message" order="6" />
@@ -518,6 +521,24 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.container.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/app.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
+        <option value="$PROJECT_DIR$/src/app/initital-state.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Show top up dialog" />
@@ -538,190 +559,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="Exchange component tests" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/select-items/select-items.component.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/rate/rate.component.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.container.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.reducer.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.actions.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.reducer.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/es/Select/SelectInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="409" column="2" selection-start-line="409" selection-start-column="2" selection-end-line="409" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/cjs/react-dom.development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="6980" column="2" selection-start-line="6980" selection-start-column="2" selection-end-line="6980" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/config/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4473" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/config/jest/babelTransform.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/bin/react-scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1497" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/lib/react-app.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-999">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2744">
-          <caret line="107" column="22" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2324">
-          <caret line="83" column="33" lean-forward="true" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.actions.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/enzyme-adapter-react-16/build/ReactSixteenAdapter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-275" />
@@ -734,26 +573,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setupTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#14#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
     <entry file="file://$PROJECT_DIR$/coverage/lcov-report/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -761,68 +581,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="42" column="7" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-            <element signature="e#809#1020#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/initital-state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/scripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2436">
@@ -853,6 +616,173 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.reducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/react-app-env.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/display-conversion.component.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/convert-currency.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/models/conversion-data.model.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/convert-currency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/format-currency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="19" lean-forward="true" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2081">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -862,35 +792,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="336">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js">
+    <entry file="file://$PROJECT_DIR$/src/app/initital-state.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="392">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js">
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        <state relative-caret-position="2408">
+          <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1049">
+          <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setupTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#14#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        <state relative-caret-position="188">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
         </state>
       </provider>
     </entry>

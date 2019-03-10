@@ -1,12 +1,16 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { CounterComponent } from './counter.component';
 
-it('should render without errors', () => {
-    const currentTime = 10;
-    const text = `Exchange rate will change in ${currentTime} seconds`;
-    const wrapper = render(<CounterComponent currentTime={currentTime}/>);
+describe('CounterComponent', () => {
     
-    expect(wrapper.text()).toEqual(text);
+    it('should render without errors', () => {
+        const currentTime = 10;
+        const text = `Exchange rate will change in ${currentTime} seconds`;
+        const wrapper = shallow(<CounterComponent currentTime={currentTime}/>);
+        
+        expect(wrapper.text()).toEqual(text);
+    });
+    
 });

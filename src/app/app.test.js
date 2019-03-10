@@ -2,6 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { shallow } from 'enzyme';
 
 import { AppComponent } from './app.component';
 import { appReducer } from './app.reducer';
@@ -11,9 +12,11 @@ const store = createStore(appReducer, initialState);
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    render(
+    shallow(
         <Provider store={store}>
             <AppComponent/>
-        </Provider>, div);
+        </Provider>,
+        div,
+    );
     unmountComponentAtNode(div);
 });
