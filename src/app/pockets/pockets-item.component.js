@@ -40,6 +40,14 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
         setTopUpDialogOpened(false);
     }
     
+    function renderTopUpDialog() {
+        return isTopUpDialogOpened &&
+            <TopUpComponent
+                onConfirm={onTopUpConfirm}
+                onCancel={onTopUpCancel}
+            />;
+    }
+    
     function onExchangeConfirm(value, convertedValue, toPocket) {
         addTransaction(pocket, -value, 'EXCHANGE');
         addTransaction(toPocket, convertedValue, 'EXCHANGE');
@@ -50,6 +58,16 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
     
     function onExchangeCancel() {
         setExchangeDialogOpened(false);
+    }
+    
+    function renderExchangeDialog() {
+        return isExchangeDialogOpened &&
+            <ExchangeComponent
+                fromPocket={pocket}
+                pocketsList={pocketsList}
+                onCancel={onExchangeCancel}
+                onConfirm={onExchangeConfirm}
+            />;
     }
     
     return (
@@ -67,21 +85,8 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
                 <TransactionsContainer pocketId={pocket.id}/>
             </CardContent>
         
-            {isTopUpDialogOpened &&
-            <TopUpComponent
-                onConfirm={onTopUpConfirm}
-                onCancel={onTopUpCancel}
-            />
-            }
-        
-            {isExchangeDialogOpened &&
-            <ExchangeComponent
-                fromPocket={pocket}
-                pocketsList={pocketsList}
-                onCancel={onExchangeCancel}
-                onConfirm={onExchangeConfirm}
-            />
-            }
+            {renderTopUpDialog()}
+            {renderExchangeDialog()}
         </Card>
     );
 }
