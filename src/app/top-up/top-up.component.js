@@ -82,6 +82,7 @@ export function TopUpComponent({ onConfirm, onCancel }) {
             <DialogActions>
                 <Button onClick={cancelButtonClickHandler}>Close</Button>
                 <Button
+                    className="confirm-button"
                     color="secondary"
                     onClick={confirmButtonClickHandler}
                     disabled={isFormInvalid()}
