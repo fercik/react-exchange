@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, Typography } from '@material-ui/core';
 
-import { TransactionsContainer } from '../transactions/transactions.container';
 import { TopUpComponent } from '../top-up/top-up.component';
 import { ExchangeComponent } from '../exchange/exchange.component';
 import { formatCurrency } from '../shared/utils/format-currency';
@@ -72,19 +71,22 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
     
     return (
         <Card style={styles.card}>
-            <div>
-                <Typography variant="h3" style={styles.header}>
-                    {formatCurrency(pocket.id, pocket.balance)}
-                </Typography>
-            </div>
+            <Typography variant="h3" style={styles.header}>
+                {formatCurrency(pocket.id, pocket.balance)}
+            </Typography>
             <CardActions>
-                <Button color="inherit" onClick={openTopUpDialog}>Top Up</Button>
-                <Button color="inherit" onClick={openExchangeDialog}>Exchange</Button>
+                <Button
+                    color="inherit"
+                    className="top-up-button"
+                    onClick={openTopUpDialog}
+                >Top Up</Button>
+                <Button
+                    color="inherit"
+                    className="exchange-button"
+                    onClick={openExchangeDialog}
+                >Exchange</Button>
             </CardActions>
-            <CardContent>
-                <TransactionsContainer pocketId={pocket.id}/>
-            </CardContent>
-        
+            
             {renderTopUpDialog()}
             {renderExchangeDialog()}
         </Card>

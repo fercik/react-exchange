@@ -4,26 +4,43 @@ import { List, Typography } from '@material-ui/core';
 import './transactions.component.css';
 import { TransactionsItem } from './item/transactions-item.component';
 
-export const TransactionsComponent = ({ pocketId, transactionsList }) => (
-    <div className="transactions">
-        <Typography variant="h6">Transactions</Typography>
-        {transactionsList(pocketId).length === 0 &&
-            <div className="empty">There are no transactions for current pocket</div>
-        }
-        
-        {transactionsList(pocketId).length > 0 &&
-            <List>
-                {
-                    transactionsList(pocketId)
-                        .map(transaction =>
-                            <TransactionsItem
-                                key={transaction.createdAt}
-                                transaction={transaction}
-                                pocketId={pocketId}
-                            />
-                        )
-                }
+export function TransactionsComponent({ pocketId, getTransactionsByPocketId }) {
+    
+    function getTransactionsListLength(pocketId) {
+        return getTransactionsByPocketId(pocketId).length;
+    }
+    
+    function renderEmpty() {
+        return (<div className="empty">There are no transactions for current pocket</div>);
+    }
+    
+    function renderListItem(transaction) {
+        return (
+            <TransactionsItem
+                key={transaction.createdAt}
+                transaction={transaction}
+                pocketId={pocketId}
+            />
+        );
+    }
+    
+    function renderList() {
+        return (
+            <List>{getTransactionsByPocketId(pocketId)
+                .map(transaction => renderListItem(transaction))}
             </List>
-        }
-    </div>
-);
+        );
+    }
+    
+    return (
+        <React.Fragment>
+            <Typography variant="h6">Transactions</Typography>
+            <div className="transactions">
+                {getTransactionsListLength(pocketId)
+                    ? renderList()
+                    : renderEmpty()
+                }
+            </div>
+        </React.Fragment>
+    );
+}

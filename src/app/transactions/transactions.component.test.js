@@ -1,17 +1,20 @@
 import React from 'react';
-import { mount } from './../../setupTests';
+import { shallow } from 'enzyme';
 
 import { TransactionsComponent } from './transactions.component';
 import { TransactionsItem } from './item/transactions-item.component';
+import { initialState } from './../initital-state';
+import { getTransactionsByPocketId } from './transactions.actions';
 
 describe('Transactions component', () => {
+    let wrapper = null;
     
     it('should render with empty list', () => {
         const transactionsList = pocketId => [];
-        const wrapper = mount(
+        const wrapper = shallow(
             <TransactionsComponent
                 pocketId='gbp'
-                transactionsList={transactionsList}
+                getTransactionsByPocketId={transactionsList}
             />
         );
         
@@ -42,10 +45,10 @@ describe('Transactions component', () => {
                 pocketId: 'usd',
             },
         ];
-        const wrapper = mount(
+        const wrapper = shallow(
             <TransactionsComponent
                 pocketId='gbp'
-                transactionsList={transactionsList}
+                getTransactionsByPocketId={transactionsList}
             />
         );
         

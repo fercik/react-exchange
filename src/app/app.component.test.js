@@ -10,13 +10,17 @@ import { initialState } from './initital-state';
 
 const store = createStore(appReducer, initialState);
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    shallow(
-        <Provider store={store}>
-            <AppComponent/>
-        </Provider>,
-        div,
-    );
-    unmountComponentAtNode(div);
+describe('AppComponent', () => {
+    
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        shallow(
+            <Provider store={store}>
+                <AppComponent/>
+            </Provider>,
+            div,
+        );
+        unmountComponentAtNode(div);
+    });
+    
 });

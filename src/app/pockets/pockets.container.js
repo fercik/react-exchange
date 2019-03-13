@@ -6,7 +6,6 @@ import { updatePocket } from './pockets.actions';
 
 const mapStateToProps = state => ({
     pockets: state.pockets.items,
-    visibleItem: state.pockets.visibleItem,
 });
 
 const mapDispatchToProps = dispatch => ({

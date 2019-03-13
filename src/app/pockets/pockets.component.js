@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Tab, Tabs } from '@material-ui/core';
 
 import { PocketItemComponent } from './pockets-item.component';
+import { TransactionsContainer } from './../transactions/transactions.container';
 
-export function PocketsComponent({ pockets, addTransaction, updatePocket, openExchangeDialog }) {
+export function PocketsComponent({ pockets, addTransaction, updatePocket }) {
     const [currentTab, setCurrentTab] = useState(0);
     
     function tabChangeHandler(event, value) {
@@ -15,7 +16,7 @@ export function PocketsComponent({ pockets, addTransaction, updatePocket, openEx
     }
     
     return (
-        <div>
+        <React.Fragment>
             <Tabs
                 value={currentTab}
                 onChange={tabChangeHandler}
@@ -27,8 +28,8 @@ export function PocketsComponent({ pockets, addTransaction, updatePocket, openEx
                 pocketsList={pockets}
                 addTransaction={addTransaction}
                 updatePocket={updatePocket}
-                openExchangeDialog={openExchangeDialog}
             />
-        </div>
+            <TransactionsContainer pocketId={getPocket(pockets).id} />
+        </React.Fragment>
     );
 }

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68e60762-d355-4086-90f7-60b1c6e5c281" name="Default Changelist" comment="Refactor">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="68e60762-d355-4086-90f7-60b1c6e5c281" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,19 +28,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="-192">
+              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="197">
+              <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -43,21 +69,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="252">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/s.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1007">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="84">
+              <caret line="3" column="92" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.container.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="53">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +146,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -81,57 +159,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/transactions/transactions.actions.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/manifest.json" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.reducer.js" />
-        <option value="$PROJECT_DIR$/src/app/exchange/exchange.actions.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.reducer.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.actions.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.container.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.js" />
         <option value="$PROJECT_DIR$/src/app/app.css" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.css" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.reducer.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.css" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions-item.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/select-item/select-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/select-items/select-items.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/rate/rate.component.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets.container.js" />
         <option value="$PROJECT_DIR$/src/app/app.reducer.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.css" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.test.js" />
         <option value="$PROJECT_DIR$/src/setupTests.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/shared/utils/convert-currency.js" />
-        <option value="$PROJECT_DIR$/src/app/shared/utils/format-currency.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.css" />
-        <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js" />
-        <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/app.component.js" />
-        <option value="$PROJECT_DIR$/src/app/initital-state.js" />
-        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/app.test.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/top-up/s.html" />
         <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.js" />
         <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/initital-state.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js" />
+        <option value="$PROJECT_DIR$/src/app/shared/utils/format-currency.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
+        <option value="$PROJECT_DIR$/src/app/app.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.container.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.component.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/s.html" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/pockets/pockets.component.test.js" />
       </list>
     </option>
   </component>
@@ -147,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,12 +248,27 @@
               <item name="exchange" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pockets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exchange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="top-up" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exchange" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exchange" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="transactions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -216,16 +308,16 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="CounterComponent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="DisplayConversionComponent" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js" />
+      <test-file value="$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.test.js" />
       <test-names>
-        <test-name value="CounterComponent" />
+        <test-name value="DisplayConversionComponent" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -273,9 +365,9 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.eject" />
-        <item itemvalue="Jest.CounterComponent" />
         <item itemvalue="npm.test:ci" />
+        <item itemvalue="Jest.DisplayConversionComponent" />
+        <item itemvalue="npm.eject" />
       </list>
     </recent_temporary>
   </component>
@@ -302,6 +394,10 @@
       <workItem from="1551569223918" duration="3203000" />
       <workItem from="1551574076078" duration="37000" />
       <workItem from="1551823882877" duration="725000" />
+      <workItem from="1552255854083" duration="4660000" />
+      <workItem from="1552261141207" duration="161000" />
+      <workItem from="1552261462900" duration="43000" />
+      <workItem from="1552428973332" duration="7105000" />
     </task>
     <task id="LOCAL-00001" summary="Show top up dialog">
       <created>1550419349544</created>
@@ -429,62 +525,104 @@
       <option name="project" value="LOCAL" />
       <updated>1552247289414</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Refactor TopUp Component">
+      <created>1552250599581</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552250599581</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Gitignore">
+      <created>1552250640986</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1552250640986</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Display conversion">
+      <created>1552258002668</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1552258002668</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactor PocketItemComponent">
+      <created>1552260799552</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1552260799552</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Render methods">
+      <created>1552261291517</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1552261291517</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Remove build step">
+      <created>1552261496425</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552261496425</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 13m 14s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 39m 14s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 14m 31s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 42m 18s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 20m 38s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 42m 43s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 22m 09s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 43m 06s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 22m 47s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 43m 29s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 25m 03s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 43m 49s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_reducer - 2019.03.03 at 01h 43m 27s.xml">
-      <configuration name="Transactions reducer" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 44m 36s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_actions - 2019.03.03 at 01h 46m 30s.xml">
-      <configuration name="Transactions actions" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 45m 00s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="Transactions_actions - 2019.03.05 at 23h 44m 48s.xml">
-      <configuration name="Transactions actions" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 45m 31s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="CounterComponent - 2019.03.10 at 17h 18m 25s.xml">
-      <configuration name="CounterComponent" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="DisplayConversionComponent - 2019.03.10 at 23h 45m 51s.xml">
+      <configuration name="DisplayConversionComponent" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111610000" />
+    <option name="totallyTimeSpent" value="123729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4795539" visible="true" weight="0.27181688" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47769517" visible="true" weight="0.28612304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.5204461" side_tool="true" weight="0.27181688" />
+      <window_info id="npm" order="2" sideWeight="0.52230483" side_tool="true" weight="0.28612304" />
       <window_info id="aws.explorer" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.35180724" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="3" visible="true" weight="0.35421687" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.35180724" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.35421687" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4993113" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50214595" side_tool="true" weight="0.35180724" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.3298397" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -504,18 +642,17 @@
     <option name="version" value="1" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.reducer.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.actions.js" />
-        <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/top-up/top-up.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/exchange.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets.container.js" />
+        <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
+        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
         <option value="$PROJECT_DIR$/src/app/pockets/pockets-item.component.js" />
         <option value="$PROJECT_DIR$/src/app/exchange/result/result.component.test.js" />
-        <option value="$PROJECT_DIR$/src/app/app.test.js" />
-        <option value="$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
         <option value="$PROJECT_DIR$/src/app/initital-state.js" />
         <option value="$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
       </list>
@@ -546,6 +683,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Show top up dialog" />
@@ -563,75 +714,16 @@
     <MESSAGE value="Fix bugs" />
     <MESSAGE value="Exchange component tests" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Refactor TopUp Component" />
+    <MESSAGE value="Gitignore" />
+    <MESSAGE value="Display conversion" />
+    <MESSAGE value="Refactor PocketItemComponent" />
+    <MESSAGE value="Render methods" />
+    <MESSAGE value="Remove build step" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove build step" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/enzyme-adapter-react-16/build/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js" />
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.container.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/scripts/test.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/config/env.js" />
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/app/app.component.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/src/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/src/serviceWorker.js.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.reducer.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.test.tsx" />
-    <entry file="file://$PROJECT_DIR$/tsconfig.json" />
-    <entry file="file://$PROJECT_DIR$/src/react-app-env.d.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/result/display-conversion.component.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/convert-currency.tsx" />
     <entry file="file://$PROJECT_DIR$/src/app/shared/models/conversion-data.model.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/convert-currency.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/format-currency.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/exchange/result/result.component.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -668,88 +760,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2081">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/initital-state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2408">
-          <caret line="91" column="30" lean-forward="true" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -766,41 +783,320 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/top-up/s.html">
+    <entry file="file://$PROJECT_DIR$/src/app/top-up/s.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/convert-currency.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1007">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="196">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/counter/counter.component.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="448">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/utils/format-currency.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="203">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4935">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/exchange.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/exchange/display-conversion/display-conversion.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.reducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/top-up/top-up.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-797">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/initital-state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/item/transactions-item.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.reducer.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="65" column="3" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.reducer.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/transactions/transactions.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/s.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="92" selection-start-line="3" selection-start-column="92" selection-end-line="3" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets-item.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/pockets/pockets.component.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

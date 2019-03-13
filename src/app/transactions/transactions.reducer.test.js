@@ -17,9 +17,7 @@ describe('Transactions reducer', () => {
             transactionId: 'test'
         };
         
-        expect(
-            transactionsReducer(undefined, action),
-        ).toEqual(defaultState);
+        expect(transactionsReducer(undefined, action)).toEqual(defaultState);
     });
     
     it('should add transaction', () => {
@@ -35,9 +33,7 @@ describe('Transactions reducer', () => {
             },
         ];
         
-        expect(
-            transactionsReducer(stateBefore, action),
-        ).toEqual(stateAfter);
+        expect(transactionsReducer(stateBefore, action)).toEqual(stateAfter);
     });
     
     it('should return sorted transactions', () => {
