@@ -18,7 +18,7 @@ describe('Transactions component', () => {
             />
         );
         
-        expect(wrapper.find('.empty').text()).toEqual('There are no transactions for current pocket');
+        expect(wrapper.find('.transactions--empty').text()).toEqual('There are no transactions for current pocket');
     });
     
     it('should render with 3 elements', () => {

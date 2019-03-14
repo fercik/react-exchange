@@ -11,7 +11,7 @@ export function TransactionsComponent({ pocketId, getTransactionsByPocketId }) {
     }
     
     function renderEmpty() {
-        return (<div className="empty">There are no transactions for current pocket</div>);
+        return (<div className="transactions--empty">There are no transactions for current pocket</div>);
     }
     
     function renderListItem(transaction) {
@@ -34,7 +34,7 @@ export function TransactionsComponent({ pocketId, getTransactionsByPocketId }) {
     
     return (
         <React.Fragment>
-            <Typography variant="h6">Transactions</Typography>
+            <Typography variant="h5">Transactions</Typography>
             <div className="transactions">
                 {getTransactionsListLength(pocketId)
                     ? renderList()

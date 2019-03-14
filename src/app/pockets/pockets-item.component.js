@@ -6,15 +6,14 @@ import { ExchangeComponent } from '../exchange/exchange.component';
 import { formatCurrency } from '../shared/utils/format-currency';
 
 const styles = {
-    card: {
-        marginTop: '16px',
-    },
     header: {
-        backgroundColor: '#1E88E5',
-        color: '#ffffff',
+        color: '#1E88E5',
         padding: '64px',
         textAlign: 'center',
-    }
+    },
+    actions: {
+        marginBottom: '16px',
+    },
 };
 
 export function PocketItemComponent({ pocket, pocketsList, addTransaction, updatePocket }) {
@@ -74,7 +73,7 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
             <Typography variant="h3" style={styles.header}>
                 {formatCurrency(pocket.id, pocket.balance)}
             </Typography>
-            <div>
+            <div style={styles.actions}>
                 <Button
                     color="inherit"
                     className="top-up-button"

@@ -2,3 +2,7 @@
     max-height: 300px;
     overflow: auto;
 }
+
+.transactions--empty {
+    font-size: 12px;
+}
