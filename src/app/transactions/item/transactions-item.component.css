@@ -1,0 +1,15 @@
+.transactions-item {
+    margin-top: 8px;
+}
+
+.transactions-item:first-child {
+    margin-top: 0;
+}
+
+.transactions-item__title--expense {
+    color: rgba(244, 67, 54, .8) !important;
+}
+
+.transactions-item__title--income {
+    color: rgba(67, 160, 71, .8) !important;
+}

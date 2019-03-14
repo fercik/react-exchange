@@ -1,5 +1,4 @@
 .transactions {
     max-height: 300px;
     overflow: auto;
-    padding: 16px 0;
 }

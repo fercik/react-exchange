@@ -20,6 +20,8 @@ export function PocketsComponent({ pockets, addTransaction, updatePocket }) {
             <Tabs
                 value={currentTab}
                 onChange={tabChangeHandler}
+                variant="fullWidth"
+                indicatorColor="primary"
             >
                 {pockets.map(pocket => <Tab key={pocket.id} label={pocket.label}/>)}
             </Tabs>

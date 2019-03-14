@@ -13,8 +13,8 @@ describe('TransactionsItemComponent', () => {
         };
         const wrapper = render(<TransactionsItem transaction={transaction} />);
         
-        expect(wrapper.find('span').text()).toEqual(`${transaction.symbol} ${transaction.value}`);
-        expect(wrapper.find('p').text()).toEqual(transaction.type);
+        expect(wrapper.find('.transactions-item__title').text()).toEqual(`${transaction.symbol} ${transaction.value}`);
+        expect(wrapper.find('.transactions-item__subheader').text()).toEqual(transaction.type);
     });
     
 });

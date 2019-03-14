@@ -70,11 +70,11 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
     }
     
     return (
-        <Card style={styles.card}>
+        <React.Fragment>
             <Typography variant="h3" style={styles.header}>
                 {formatCurrency(pocket.id, pocket.balance)}
             </Typography>
-            <CardActions>
+            <div>
                 <Button
                     color="inherit"
                     className="top-up-button"
@@ -85,10 +85,10 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
                     className="exchange-button"
                     onClick={openExchangeDialog}
                 >Exchange</Button>
-            </CardActions>
-            
+            </div>
+    
             {renderTopUpDialog()}
             {renderExchangeDialog()}
-        </Card>
+        </React.Fragment>
     );
 }
