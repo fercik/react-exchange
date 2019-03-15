@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Card, CardActions, Typography } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 
-import { TopUpComponent } from '../top-up/top-up.component';
-import { ExchangeComponent } from '../exchange/exchange.component';
-import { formatCurrency } from '../shared/utils/format-currency';
+import { TopUpComponent } from '../../top-up/top-up.component';
+import { ExchangeComponent } from '../../exchange/exchange.component';
+import { formatCurrency } from '../../shared/utils/format-currency';
 
 const styles = {
     header: {

@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
 import { PocketsComponent } from './pockets.component';
-import { addTransaction } from '../transactions/transactions.actions';
-import { updatePocket } from './pockets.actions';
+import { addTransaction } from '../transactions/actions/transactions.actions';
+import { updatePocket } from './actions/pockets.actions';
 
 const mapStateToProps = state => ({
     pockets: state.pockets.items,

@@ -1,4 +1,4 @@
-import { UPDATE_POCKET } from './pockets.actions';
+import { UPDATE_POCKET } from '../actions/pockets.actions';
 import { pocketsReducer } from './pockets.reducer';
 
 describe('PocketsReducer', () => {

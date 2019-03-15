@@ -2,8 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import { PocketItemComponent } from './pockets-item.component';
-import { TopUpComponent } from '../top-up/top-up.component';
-import { ExchangeComponent } from '../exchange/exchange.component';
+import { TopUpComponent } from '../../top-up/top-up.component';
+import { ExchangeComponent } from '../../exchange/exchange.component';
 
 describe('PocketItemComponent', () => {
     const props = {

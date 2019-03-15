@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { TransactionsComponent } from './transactions.component';
-import { getTransactionsByPocketId } from './transactions.actions';
+import { getTransactionsByPocketId } from './actions/transactions.actions';
 
 const mapStateToProps = state => ({
     getTransactionsByPocketId: pocketId => getTransactionsByPocketId(state.transactions, pocketId),

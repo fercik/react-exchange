@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tab, Tabs } from '@material-ui/core';
 
-import { PocketItemComponent } from './pockets-item.component';
+import { PocketItemComponent } from './item/pockets-item.component';
 import { TransactionsContainer } from './../transactions/transactions.container';
 
 export function PocketsComponent({ pockets, addTransaction, updatePocket }) {

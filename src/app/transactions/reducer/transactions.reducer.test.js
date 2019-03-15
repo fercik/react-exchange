@@ -1,5 +1,5 @@
 import { transactionsReducer } from './transactions.reducer';
-import { addTransaction } from './transactions.actions';
+import { addTransaction } from '../actions/transactions.actions';
 
 describe('Transactions reducer', () => {
     const pocket = {
