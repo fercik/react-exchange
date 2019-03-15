@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormHelperText } from '@material-ui/core';
 import { mount } from 'enzyme';
 
 import { TopUpComponent } from './top-up.component';
