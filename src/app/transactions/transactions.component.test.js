@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { TransactionsComponent } from './transactions.component';
 import { TransactionsItem } from './item/transactions-item.component';
 import { initialState } from './../initital-state';
-import { getTransactionsByPocketId } from './transactions.actions';
+import { getTransactionsByPocketId } from './actions/transactions.actions';
 
 describe('Transactions component', () => {
     let wrapper = null;
