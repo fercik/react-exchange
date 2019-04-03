@@ -63,7 +63,7 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
         const base = fromPocket.id.toUpperCase();
         
         axios
-            .get(`https://api.exchangeratesapi.io/latest?base=${base}`)
+            .get(`https://api.exchangeratesapi.io/latest?base=GBP`)
             .then(result => {
                 setRates(result.data.rates);
                 setExchangeRate(convert(result.data.rates, fromPocket.id, selectedCurrency.id));
@@ -84,6 +84,7 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     
     function selectOnChangeHandler(event) {
         setSelectedCurrency(event.target.value);
+        console.log(rates, fromPocket.id, event.target.value);
         setExchangeRate(convert(rates, fromPocket.id, event.target.value.id));
     }
     
