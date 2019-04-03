@@ -25,11 +25,11 @@ describe('Transactions reducer', () => {
         const action = addTransaction(pocket, 10, 'TOP_UP');
         const stateAfter = [
             {
-                symbol: '$',
                 createdAt: action.data.createdAt,
                 value: 10,
                 type: 'TOP_UP',
                 pocketId: 'usd',
+                currency: 'USD'
             },
         ];
         
@@ -42,18 +42,18 @@ describe('Transactions reducer', () => {
         const action2 = addTransaction(pocket, 10, 'TOP_UP');
         const stateAfter = [
             {
-                symbol: '$',
                 createdAt: action2.data.createdAt,
                 value: 10,
                 type: 'TOP_UP',
                 pocketId: 'usd',
+                currency: 'USD',
             },
             {
-                symbol: '$',
                 createdAt: action1.data.createdAt,
                 value: 10,
                 type: 'TOP_UP',
                 pocketId: 'usd',
+                currency: 'USD',
             },
         ];
         

@@ -84,7 +84,6 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     
     function selectOnChangeHandler(event) {
         setSelectedCurrency(event.target.value);
-        console.log(rates, fromPocket.id, event.target.value);
         setExchangeRate(convert(rates, fromPocket.id, event.target.value.id));
     }
     
