@@ -3,7 +3,7 @@ export const ADD_TRANSACTION = 'ADD_TRANSACTION';
 export const addTransaction = (pocket, value, type) => ({
     type: ADD_TRANSACTION,
     data: {
-        symbol: pocket.symbol,
+        currency: pocket.currency,
         createdAt: Date.now(),
         value,
         type,

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Typography } from '@material-ui/core';
+import { Typography, Fab, Tooltip } from '@material-ui/core';
+import { AttachMoney, SwapHoriz } from '@material-ui/icons';
 
 import { TopUpComponent } from '../../top-up/top-up.component';
-import { ExchangeComponent } from '../../exchange/exchange.component';
+import { ExchangeDialogComponent } from '../../exchange/exchange.component';
 import { formatCurrency } from '../../shared/utils/format-currency';
 
 const styles = {
@@ -13,6 +14,9 @@ const styles = {
     },
     actions: {
         marginBottom: '16px',
+        buttons: {
+            marginRight: '8px',
+        },
     },
 };
 
@@ -60,7 +64,7 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
     
     function renderExchangeDialog() {
         return isExchangeDialogOpened &&
-            <ExchangeComponent
+            <ExchangeDialogComponent
                 fromPocket={pocket}
                 pocketsList={pocketsList}
                 onCancel={onExchangeCancel}
@@ -74,16 +78,25 @@ export function PocketItemComponent({ pocket, pocketsList, addTransaction, updat
                 {formatCurrency(pocket.id, pocket.balance)}
             </Typography>
             <div style={styles.actions}>
-                <Button
-                    color="inherit"
-                    className="top-up-button"
-                    onClick={openTopUpDialog}
-                >Top Up</Button>
-                <Button
-                    color="inherit"
-                    className="exchange-button"
-                    onClick={openExchangeDialog}
-                >Exchange</Button>
+                <Tooltip title="Top Up">
+                    <Fab
+                        color="primary"
+                        className="top-up-button"
+                        onClick={openTopUpDialog}
+                        style={styles.actions.buttons}
+                    >
+                        <AttachMoney />
+                    </Fab>
+                </Tooltip>
+                <Tooltip title="Exchange">
+                    <Fab
+                        color="primary"
+                        className="exchange-button"
+                        onClick={openExchangeDialog}
+                    >
+                        <SwapHoriz />
+                    </Fab>
+                </Tooltip>
             </div>
     
             {renderTopUpDialog()}

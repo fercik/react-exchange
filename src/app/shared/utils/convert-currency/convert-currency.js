@@ -3,5 +3,5 @@ function convertToBase(data, currency) {
 }
 
 export function convert(data, fromCurrency, toCurrency) {
-    return convertToBase(data, fromCurrency) * data[toCurrency];
+    return convertToBase(data, fromCurrency.toUpperCase()) * data[toCurrency.toUpperCase()];
 }
