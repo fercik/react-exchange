@@ -20,14 +20,12 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     const [selectedCurrency, setSelectedCurrency] = useState({});
     const [inputValue, setInputValue] = useState(100);
     const [minValueError, setMinValueError] = useState(false);
-    const [formatError, setFormatError] = useState(false);
     const [overBalanceError, setOverBalanceError] = useState(false);
     
     const COUNTER_TIMER_MILIS = 1000;
     const HTTP_TIMER_MILIS = 10000;
     const inputProps = {
         min: 0,
-        max: fromPocket.value,
     };
     
     useEffect(() => {
@@ -78,8 +76,13 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
         if (event.target.value < inputProps.min) {
             return setMinValueError(true);
         }
+    
+        if (event.target.value > fromPocket.balance) {
+            return setOverBalanceError(true);
+        }
         
         setMinValueError(false);
+        setOverBalanceError(false);
     }
     
     function selectOnChangeHandler(event) {
@@ -106,7 +109,6 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
                 
                 {minValueError && renderErrorMessage('minValue', 'Value must be greater than 0')}
                 {overBalanceError && renderErrorMessage('overBalance', 'Value is greater than pocket balance')}
-                {formatError && renderErrorMessage('format', 'Value must be a number')}
             </FormControl>
         );
     }
