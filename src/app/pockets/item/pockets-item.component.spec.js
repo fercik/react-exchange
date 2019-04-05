@@ -50,7 +50,6 @@ describe('PocketItemComponent', () => {
     
     it('should render Exchange dialog', () => {
         wrapper = mount(<PocketItemComponent {...props} />);
-        console.log(wrapper.find('.exchange-button').first());
         wrapper.find('.exchange-button').first().simulate('click');
         
         expect(wrapper.find(ExchangeDialogComponent).exists()).toBe(true);

@@ -110,7 +110,6 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     }
     
     function renderSelect() {
-        console.log(selectedCurrency)
         return (
             <FormControl className="control">
                 <InputLabel>Destination currency</InputLabel>
