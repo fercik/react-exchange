@@ -5,7 +5,6 @@ import { TransactionsComponent } from './transactions.component';
 import { TransactionsItem } from './item/transactions-item.component';
 
 describe('Transactions component', () => {
-    let wrapper = null;
     
     it('should render with empty list', () => {
         const transactionsList = pocketId => [];

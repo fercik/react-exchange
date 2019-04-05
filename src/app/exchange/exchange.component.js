@@ -7,7 +7,6 @@ import {
 import axios from 'axios';
 
 import './exchange.component.css';
-import { ResultComponent } from './result/result.component';
 import { CounterComponent } from './counter/counter.component';
 import { convert } from '../shared/utils/convert-currency/convert-currency';
 import { DisplayConversionComponent } from './display-conversion/display-conversion.component';
@@ -18,7 +17,6 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     const [exchangeRate, setExchangeRate] = useState(0);
     const [counter, setCounter] = useState(10);
     const [selectedCurrency, setSelectedCurrency] = useState({});
-    const [inputValue, setInputValue] = useState(100);
     const [minValueError, setMinValueError] = useState(false);
     const [overBalanceError, setOverBalanceError] = useState(false);
     
@@ -58,8 +56,6 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     }
     
     function getData() {
-        const base = fromPocket.id.toUpperCase();
-        
         axios
             .get(`https://api.exchangeratesapi.io/latest?base=GBP`)
             .then(result => {
@@ -114,6 +110,7 @@ export function ExchangeDialogComponent({ fromPocket, pocketsList, onConfirm, on
     }
     
     function renderSelect() {
+        console.log(selectedCurrency)
         return (
             <FormControl className="control">
                 <InputLabel>Destination currency</InputLabel>
